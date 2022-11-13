@@ -36,7 +36,7 @@ namespace Diyet_Programi_Querry
             lblAdSoyad.Text = "Serkan Temiz";
             lblKilo.Text = "75";
             lblYas.Text = "27";
-           
+            
         }
 
         private void label1_MouseEnter(object sender, EventArgs e)
