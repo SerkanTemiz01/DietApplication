@@ -230,6 +230,7 @@
     <Content Include="Resources\spor.jpg" />
     <Content Include="Resources\spor2.jpg" />
     <Content Include="Resources\sporyapanfatih.png" />
+    <Content Include="Resources\undo_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
