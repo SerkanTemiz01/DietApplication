@@ -43,10 +43,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(131, 21);
+            this.label1.Location = new System.Drawing.Point(120, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 29);
+            this.label1.Size = new System.Drawing.Size(266, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "AKTİVİTE DÜZEYİ";
             // 
@@ -55,10 +55,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(117, 62);
+            this.label2.Location = new System.Drawing.Point(102, 57);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 17);
+            this.label2.Size = new System.Drawing.Size(296, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Haftalık Egzersiz Durumunuzu seçiniz";
             // 
@@ -73,7 +73,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(13, 543);
+            this.button5.Location = new System.Drawing.Point(13, 482);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(102, 77);
@@ -90,7 +90,7 @@
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(75, 104);
+            this.rjButton1.Location = new System.Drawing.Point(75, 103);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(344, 65);
             this.rjButton1.TabIndex = 8;
@@ -108,7 +108,7 @@
             this.btnBirKacGünEgzersiz.FlatAppearance.BorderSize = 0;
             this.btnBirKacGünEgzersiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBirKacGünEgzersiz.ForeColor = System.Drawing.Color.White;
-            this.btnBirKacGünEgzersiz.Location = new System.Drawing.Point(75, 185);
+            this.btnBirKacGünEgzersiz.Location = new System.Drawing.Point(75, 190);
             this.btnBirKacGünEgzersiz.Name = "btnBirKacGünEgzersiz";
             this.btnBirKacGünEgzersiz.Size = new System.Drawing.Size(344, 65);
             this.btnBirKacGünEgzersiz.TabIndex = 8;
@@ -126,7 +126,7 @@
             this.btnDortGun.FlatAppearance.BorderSize = 0;
             this.btnDortGun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDortGun.ForeColor = System.Drawing.Color.White;
-            this.btnDortGun.Location = new System.Drawing.Point(75, 256);
+            this.btnDortGun.Location = new System.Drawing.Point(75, 276);
             this.btnDortGun.Name = "btnDortGun";
             this.btnDortGun.Size = new System.Drawing.Size(344, 65);
             this.btnDortGun.TabIndex = 8;
@@ -144,7 +144,7 @@
             this.btnAltiGun.FlatAppearance.BorderSize = 0;
             this.btnAltiGun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAltiGun.ForeColor = System.Drawing.Color.White;
-            this.btnAltiGun.Location = new System.Drawing.Point(75, 341);
+            this.btnAltiGun.Location = new System.Drawing.Point(75, 362);
             this.btnAltiGun.Name = "btnAltiGun";
             this.btnAltiGun.Size = new System.Drawing.Size(344, 65);
             this.btnAltiGun.TabIndex = 8;
@@ -154,11 +154,11 @@
             // 
             // Aktivite_Duzeyi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(527, 632);
+            this.ClientSize = new System.Drawing.Size(514, 609);
             this.Controls.Add(this.btnAltiGun);
             this.Controls.Add(this.btnDortGun);
             this.Controls.Add(this.btnBirKacGünEgzersiz);
