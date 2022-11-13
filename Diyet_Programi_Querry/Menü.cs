@@ -21,7 +21,7 @@ namespace Diyet_Programi_Querry
 
         private void lblKalori_Click(object sender, EventArgs e)
         {
-
+            //asadajjcjajakkkaas26626
         }
 
         private void Menü_Load(object sender, EventArgs e)
