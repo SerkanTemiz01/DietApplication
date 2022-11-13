@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aktivite_Duzeyi));
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.btnBirKacGünEgzersiz = new CustomControls.RJControls.RJButton();
             this.btnDortGun = new CustomControls.RJControls.RJButton();
+            this.btnAltiGun = new CustomControls.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // label1
@@ -46,21 +46,9 @@
             this.label1.Location = new System.Drawing.Point(131, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 36);
+            this.label1.Size = new System.Drawing.Size(211, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "AKTİVİTE DÜZEYİ";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(208, 527);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(344, 83);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "HAFTADA 6-7 GÜN";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -70,7 +58,7 @@
             this.label2.Location = new System.Drawing.Point(117, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 20);
+            this.label2.Size = new System.Drawing.Size(245, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Haftalık Egzersiz Durumunuzu seçiniz";
             // 
@@ -146,20 +134,38 @@
             this.btnDortGun.TextColor = System.Drawing.Color.White;
             this.btnDortGun.UseVisualStyleBackColor = false;
             // 
+            // btnAltiGun
+            // 
+            this.btnAltiGun.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAltiGun.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAltiGun.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAltiGun.BorderRadius = 12;
+            this.btnAltiGun.BorderSize = 0;
+            this.btnAltiGun.FlatAppearance.BorderSize = 0;
+            this.btnAltiGun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAltiGun.ForeColor = System.Drawing.Color.White;
+            this.btnAltiGun.Location = new System.Drawing.Point(75, 341);
+            this.btnAltiGun.Name = "btnAltiGun";
+            this.btnAltiGun.Size = new System.Drawing.Size(344, 65);
+            this.btnAltiGun.TabIndex = 8;
+            this.btnAltiGun.Text = "HAFTADA 6-7 GÜN";
+            this.btnAltiGun.TextColor = System.Drawing.Color.White;
+            this.btnAltiGun.UseVisualStyleBackColor = false;
+            // 
             // Aktivite_Duzeyi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(527, 632);
+            this.Controls.Add(this.btnAltiGun);
             this.Controls.Add(this.btnDortGun);
             this.Controls.Add(this.btnBirKacGünEgzersiz);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Aktivite_Duzeyi";
@@ -171,11 +177,11 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button5;
         private CustomControls.RJControls.RJButton rjButton1;
         private CustomControls.RJControls.RJButton btnBirKacGünEgzersiz;
         private CustomControls.RJControls.RJButton btnDortGun;
+        private CustomControls.RJControls.RJButton btnAltiGun;
     }
 }
