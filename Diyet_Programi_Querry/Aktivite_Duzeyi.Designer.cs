@@ -158,7 +158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(514, 609);
+            this.ClientSize = new System.Drawing.Size(514, 571);
             this.Controls.Add(this.btnAltiGun);
             this.Controls.Add(this.btnDortGun);
             this.Controls.Add(this.btnBirKacGünEgzersiz);

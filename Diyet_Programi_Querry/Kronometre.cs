@@ -57,5 +57,24 @@ namespace Diyet_Programi_Querry
             saat = 0;
             timer1.Stop();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            lblSaniye.Text = "00";
+            lblDakika.Text = "00";
+            lblSaat.Text = "00";
+            saniye = 0;
+            dakika = 0;
+            saat = 0;
+            timer1.Stop();
+            Menü menü = new Menü();
+            menü.Show();
+            this.Close();
+        }
+
+        private void Kronometre_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

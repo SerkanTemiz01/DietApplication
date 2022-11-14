@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgunGirisi));
             this.cmbOgunSec = new System.Windows.Forms.ComboBox();
             this.dgwliste = new System.Windows.Forms.DataGridView();
-            this.btnEkle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
             this.dgwYenilen = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nmrGram = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnYeniÖgun = new System.Windows.Forms.Button();
+            this.btnEkle = new CustomControls.RJControls.RJButton();
+            this.btnYeniÖgun = new CustomControls.RJControls.RJButton();
+            this.btnSil = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgwliste)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwYenilen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrGram)).BeginInit();
@@ -50,7 +50,7 @@
             this.cmbOgunSec.Location = new System.Drawing.Point(13, 65);
             this.cmbOgunSec.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbOgunSec.Name = "cmbOgunSec";
-            this.cmbOgunSec.Size = new System.Drawing.Size(249, 23);
+            this.cmbOgunSec.Size = new System.Drawing.Size(249, 27);
             this.cmbOgunSec.TabIndex = 0;
             // 
             // dgwliste
@@ -60,28 +60,9 @@
             this.dgwliste.Location = new System.Drawing.Point(13, 96);
             this.dgwliste.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgwliste.Name = "dgwliste";
+            this.dgwliste.RowHeadersWidth = 51;
             this.dgwliste.Size = new System.Drawing.Size(391, 205);
             this.dgwliste.TabIndex = 1;
-            // 
-            // btnEkle
-            // 
-            this.btnEkle.Location = new System.Drawing.Point(13, 309);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(134, 27);
-            this.btnEkle.TabIndex = 2;
-            this.btnEkle.Text = "Öğün Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
-            // 
-            // btnSil
-            // 
-            this.btnSil.Location = new System.Drawing.Point(447, 305);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(119, 27);
-            this.btnSil.TabIndex = 2;
-            this.btnSil.Text = "Öğün Çıkar";
-            this.btnSil.UseVisualStyleBackColor = true;
             // 
             // dgwYenilen
             // 
@@ -90,6 +71,7 @@
             this.dgwYenilen.Location = new System.Drawing.Point(447, 96);
             this.dgwYenilen.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgwYenilen.Name = "dgwYenilen";
+            this.dgwYenilen.RowHeadersWidth = 51;
             this.dgwYenilen.Size = new System.Drawing.Size(400, 205);
             this.dgwYenilen.TabIndex = 1;
             // 
@@ -97,10 +79,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(154, 317);
+            this.label1.Location = new System.Drawing.Point(158, 319);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 15);
+            this.label1.Size = new System.Drawing.Size(62, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Miktar";
             // 
@@ -108,19 +90,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(327, 317);
+            this.label2.Location = new System.Drawing.Point(350, 319);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 15);
+            this.label2.Size = new System.Drawing.Size(33, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Gr.";
             // 
             // nmrGram
             // 
-            this.nmrGram.Location = new System.Drawing.Point(205, 312);
+            this.nmrGram.Location = new System.Drawing.Point(228, 314);
             this.nmrGram.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.nmrGram.Name = "nmrGram";
-            this.nmrGram.Size = new System.Drawing.Size(115, 22);
+            this.nmrGram.Size = new System.Drawing.Size(115, 26);
             this.nmrGram.TabIndex = 5;
             // 
             // button1
@@ -141,30 +123,74 @@
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // btnEkle
+            // 
+            this.btnEkle.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEkle.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEkle.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEkle.BorderRadius = 20;
+            this.btnEkle.BorderSize = 0;
+            this.btnEkle.FlatAppearance.BorderSize = 0;
+            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEkle.ForeColor = System.Drawing.Color.White;
+            this.btnEkle.Location = new System.Drawing.Point(12, 305);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(132, 47);
+            this.btnEkle.TabIndex = 7;
+            this.btnEkle.Text = "Öğün Ekle";
+            this.btnEkle.TextColor = System.Drawing.Color.White;
+            this.btnEkle.UseVisualStyleBackColor = false;
+            // 
             // btnYeniÖgun
             // 
+            this.btnYeniÖgun.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnYeniÖgun.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnYeniÖgun.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnYeniÖgun.BorderRadius = 20;
+            this.btnYeniÖgun.BorderSize = 0;
+            this.btnYeniÖgun.FlatAppearance.BorderSize = 0;
+            this.btnYeniÖgun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYeniÖgun.ForeColor = System.Drawing.Color.White;
             this.btnYeniÖgun.Location = new System.Drawing.Point(13, 358);
-            this.btnYeniÖgun.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnYeniÖgun.Name = "btnYeniÖgun";
-            this.btnYeniÖgun.Size = new System.Drawing.Size(169, 45);
-            this.btnYeniÖgun.TabIndex = 2;
+            this.btnYeniÖgun.Size = new System.Drawing.Size(207, 48);
+            this.btnYeniÖgun.TabIndex = 7;
             this.btnYeniÖgun.Text = "Listeye Yeni Öğün Ekle";
-            this.btnYeniÖgun.UseVisualStyleBackColor = true;
+            this.btnYeniÖgun.TextColor = System.Drawing.Color.White;
+            this.btnYeniÖgun.UseVisualStyleBackColor = false;
+            // 
+            // btnSil
+            // 
+            this.btnSil.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSil.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSil.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSil.BorderRadius = 20;
+            this.btnSil.BorderSize = 0;
+            this.btnSil.FlatAppearance.BorderSize = 0;
+            this.btnSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSil.ForeColor = System.Drawing.Color.White;
+            this.btnSil.Location = new System.Drawing.Point(447, 305);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(132, 47);
+            this.btnSil.TabIndex = 7;
+            this.btnSil.Text = "Öğün Çıkar";
+            this.btnSil.TextColor = System.Drawing.Color.White;
+            this.btnSil.UseVisualStyleBackColor = false;
             // 
             // OgunGirisi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(881, 427);
+            this.Controls.Add(this.btnYeniÖgun);
+            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nmrGram);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnYeniÖgun);
-            this.Controls.Add(this.btnSil);
-            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.dgwYenilen);
             this.Controls.Add(this.dgwliste);
             this.Controls.Add(this.cmbOgunSec);
@@ -184,13 +210,13 @@
         #endregion
         private System.Windows.Forms.ComboBox cmbOgunSec;
         private System.Windows.Forms.DataGridView dgwliste;
-        private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.DataGridView dgwYenilen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nmrGram;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnYeniÖgun;
+        private CustomControls.RJControls.RJButton btnEkle;
+        private CustomControls.RJControls.RJButton btnYeniÖgun;
+        private CustomControls.RJControls.RJButton btnSil;
     }
 }

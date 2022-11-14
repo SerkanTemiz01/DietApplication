@@ -40,7 +40,7 @@ namespace Diyet_Programi_Querry
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnGirisYap = new System.Windows.Forms.Button();
+            this.btnGirisYap = new CustomControls.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // textBox1
@@ -58,9 +58,9 @@ namespace Diyet_Programi_Querry
             this.label1.Location = new System.Drawing.Point(0, 72);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 19);
+            this.label1.Size = new System.Drawing.Size(114, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Kullanıcı Adı";
+            this.label1.Text = "Kullanıcı Adı:";
             // 
             // textBox2
             // 
@@ -74,12 +74,12 @@ namespace Diyet_Programi_Querry
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(13, 113);
+            this.label2.Location = new System.Drawing.Point(63, 113);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 19);
+            this.label2.Size = new System.Drawing.Size(51, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Şifre";
+            this.label2.Text = "Şifre:";
             // 
             // button1
             // 
@@ -101,12 +101,22 @@ namespace Diyet_Programi_Querry
             // 
             // btnGirisYap
             // 
-            this.btnGirisYap.Location = new System.Drawing.Point(116, 152);
+            this.btnGirisYap.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGirisYap.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGirisYap.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGirisYap.BorderRadius = 10;
+            this.btnGirisYap.BorderSize = 0;
+            this.btnGirisYap.FlatAppearance.BorderSize = 0;
+            this.btnGirisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGirisYap.ForeColor = System.Drawing.Color.White;
+            this.btnGirisYap.Location = new System.Drawing.Point(132, 154);
             this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(196, 51);
-            this.btnGirisYap.TabIndex = 3;
+            this.btnGirisYap.Size = new System.Drawing.Size(165, 44);
+            this.btnGirisYap.TabIndex = 4;
             this.btnGirisYap.Text = "Giriş Yap";
-            this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.TextColor = System.Drawing.Color.White;
+            this.btnGirisYap.UseVisualStyleBackColor = false;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click_1);
             // 
             // GirisYap
             // 
@@ -138,6 +148,6 @@ namespace Diyet_Programi_Querry
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnGirisYap;
+        private CustomControls.RJControls.RJButton btnGirisYap;
     }
 }

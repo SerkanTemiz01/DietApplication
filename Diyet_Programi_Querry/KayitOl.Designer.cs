@@ -53,7 +53,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(166, 303);
+            this.label8.Location = new System.Drawing.Point(192, 316);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(288, 17);
@@ -66,7 +66,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(166, 286);
+            this.label7.Location = new System.Drawing.Point(192, 299);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(232, 17);
@@ -76,7 +76,7 @@
             // txtSifreTekrar
             // 
             this.txtSifreTekrar.BackColor = System.Drawing.Color.White;
-            this.txtSifreTekrar.Location = new System.Drawing.Point(166, 253);
+            this.txtSifreTekrar.Location = new System.Drawing.Point(192, 266);
             this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSifreTekrar.Name = "txtSifreTekrar";
             this.txtSifreTekrar.Size = new System.Drawing.Size(237, 26);
@@ -85,7 +85,7 @@
             // txtSifreUyeOl
             // 
             this.txtSifreUyeOl.BackColor = System.Drawing.Color.White;
-            this.txtSifreUyeOl.Location = new System.Drawing.Point(166, 219);
+            this.txtSifreUyeOl.Location = new System.Drawing.Point(192, 232);
             this.txtSifreUyeOl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSifreUyeOl.Name = "txtSifreUyeOl";
             this.txtSifreUyeOl.Size = new System.Drawing.Size(237, 26);
@@ -94,7 +94,7 @@
             // txtEmailUyeOl
             // 
             this.txtEmailUyeOl.BackColor = System.Drawing.Color.White;
-            this.txtEmailUyeOl.Location = new System.Drawing.Point(166, 184);
+            this.txtEmailUyeOl.Location = new System.Drawing.Point(192, 197);
             this.txtEmailUyeOl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtEmailUyeOl.Name = "txtEmailUyeOl";
             this.txtEmailUyeOl.Size = new System.Drawing.Size(237, 26);
@@ -103,7 +103,7 @@
             // txtSoyadUyeOl
             // 
             this.txtSoyadUyeOl.BackColor = System.Drawing.Color.White;
-            this.txtSoyadUyeOl.Location = new System.Drawing.Point(166, 111);
+            this.txtSoyadUyeOl.Location = new System.Drawing.Point(192, 124);
             this.txtSoyadUyeOl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSoyadUyeOl.Name = "txtSoyadUyeOl";
             this.txtSoyadUyeOl.Size = new System.Drawing.Size(237, 26);
@@ -112,7 +112,7 @@
             // txtAdUyeOl
             // 
             this.txtAdUyeOl.BackColor = System.Drawing.Color.White;
-            this.txtAdUyeOl.Location = new System.Drawing.Point(166, 73);
+            this.txtAdUyeOl.Location = new System.Drawing.Point(192, 86);
             this.txtAdUyeOl.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtAdUyeOl.Name = "txtAdUyeOl";
             this.txtAdUyeOl.Size = new System.Drawing.Size(237, 26);
@@ -124,7 +124,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(23, 253);
+            this.label6.Location = new System.Drawing.Point(61, 266);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 22);
@@ -137,7 +137,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(23, 215);
+            this.label5.Location = new System.Drawing.Point(119, 232);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 22);
@@ -150,7 +150,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(23, 181);
+            this.label4.Location = new System.Drawing.Point(109, 197);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 22);
@@ -163,7 +163,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(23, 111);
+            this.label3.Location = new System.Drawing.Point(108, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 22);
@@ -176,7 +176,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(23, 73);
+            this.label9.Location = new System.Drawing.Point(134, 86);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 22);
@@ -189,17 +189,17 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(23, 145);
+            this.label1.Location = new System.Drawing.Point(47, 163);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 22);
+            this.label1.Size = new System.Drawing.Size(130, 22);
             this.label1.TabIndex = 23;
-            this.label1.Text = "Kullanıcı Adı:";
+            this.label1.Text = "Kullanıcı Adı :";
             // 
             // txtKullaniciAdi
             // 
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.White;
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(166, 146);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(192, 159);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(237, 26);
@@ -216,10 +216,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(18, 369);
+            this.button1.Location = new System.Drawing.Point(13, 441);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 77);
+            this.button1.Size = new System.Drawing.Size(70, 59);
             this.button1.TabIndex = 35;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -233,7 +233,7 @@
             this.btnKayitOl.FlatAppearance.BorderSize = 0;
             this.btnKayitOl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKayitOl.ForeColor = System.Drawing.Color.White;
-            this.btnKayitOl.Location = new System.Drawing.Point(169, 351);
+            this.btnKayitOl.Location = new System.Drawing.Point(195, 364);
             this.btnKayitOl.Name = "btnKayitOl";
             this.btnKayitOl.Size = new System.Drawing.Size(229, 51);
             this.btnKayitOl.TabIndex = 36;
@@ -246,7 +246,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(166, 320);
+            this.label2.Location = new System.Drawing.Point(192, 333);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(215, 17);
@@ -260,7 +260,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(573, 458);
+            this.ClientSize = new System.Drawing.Size(577, 512);
             this.Controls.Add(this.btnKayitOl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);

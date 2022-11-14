@@ -31,9 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menü));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.btnRaporlama = new CustomControls.RJControls.RJButton();
+            this.btnEgzersiz = new CustomControls.RJControls.RJButton();
+            this.btnKronometre = new CustomControls.RJControls.RJButton();
+            this.btnSu = new CustomControls.RJControls.RJButton();
+            this.btnAdimSayisi = new CustomControls.RJControls.RJButton();
+            this.btnOgunGirisi = new CustomControls.RJControls.RJButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grpKalori = new System.Windows.Forms.GroupBox();
+            this.circularProgressBar1 = new CircularProgressBar();
             this.label12 = new System.Windows.Forms.Label();
             this.lblEgzersizKalori = new System.Windows.Forms.Label();
             this.lblKalori = new System.Windows.Forms.Label();
@@ -56,14 +64,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblAdim = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.circularProgressBar1 = new CircularProgressBar();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.btnRaporlama = new CustomControls.RJControls.RJButton();
-            this.btnEgzersiz = new CustomControls.RJControls.RJButton();
-            this.btnKronometre = new CustomControls.RJControls.RJButton();
-            this.btnSu = new CustomControls.RJControls.RJButton();
-            this.btnAdimSayisi = new CustomControls.RJControls.RJButton();
-            this.btnOgunGirisi = new CustomControls.RJControls.RJButton();
+            this.circularProgressBar2 = new CircularProgressBar();
             this.pnlMenu.SuspendLayout();
             this.grpKalori.SuspendLayout();
             this.grpSu.SuspendLayout();
@@ -90,6 +91,133 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(208, 519);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.RosyBrown;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.rjButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton1.BackgroundImage")));
+            this.rjButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 22;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(18, 429);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(168, 51);
+            this.rjButton1.TabIndex = 10;
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
+            // btnRaporlama
+            // 
+            this.btnRaporlama.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnRaporlama.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnRaporlama.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnRaporlama.BorderRadius = 20;
+            this.btnRaporlama.BorderSize = 0;
+            this.btnRaporlama.FlatAppearance.BorderSize = 0;
+            this.btnRaporlama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRaporlama.ForeColor = System.Drawing.Color.White;
+            this.btnRaporlama.Location = new System.Drawing.Point(15, 348);
+            this.btnRaporlama.Name = "btnRaporlama";
+            this.btnRaporlama.Size = new System.Drawing.Size(171, 40);
+            this.btnRaporlama.TabIndex = 9;
+            this.btnRaporlama.Text = "Raporlama";
+            this.btnRaporlama.TextColor = System.Drawing.Color.White;
+            this.btnRaporlama.UseVisualStyleBackColor = false;
+            // 
+            // btnEgzersiz
+            // 
+            this.btnEgzersiz.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnEgzersiz.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnEgzersiz.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnEgzersiz.BorderRadius = 20;
+            this.btnEgzersiz.BorderSize = 0;
+            this.btnEgzersiz.FlatAppearance.BorderSize = 0;
+            this.btnEgzersiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEgzersiz.ForeColor = System.Drawing.Color.White;
+            this.btnEgzersiz.Location = new System.Drawing.Point(17, 292);
+            this.btnEgzersiz.Name = "btnEgzersiz";
+            this.btnEgzersiz.Size = new System.Drawing.Size(169, 40);
+            this.btnEgzersiz.TabIndex = 9;
+            this.btnEgzersiz.Text = "Egzersizler";
+            this.btnEgzersiz.TextColor = System.Drawing.Color.White;
+            this.btnEgzersiz.UseVisualStyleBackColor = false;
+            // 
+            // btnKronometre
+            // 
+            this.btnKronometre.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnKronometre.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnKronometre.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnKronometre.BorderRadius = 20;
+            this.btnKronometre.BorderSize = 0;
+            this.btnKronometre.FlatAppearance.BorderSize = 0;
+            this.btnKronometre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKronometre.ForeColor = System.Drawing.Color.White;
+            this.btnKronometre.Location = new System.Drawing.Point(15, 229);
+            this.btnKronometre.Name = "btnKronometre";
+            this.btnKronometre.Size = new System.Drawing.Size(173, 40);
+            this.btnKronometre.TabIndex = 9;
+            this.btnKronometre.Text = "Kronometre";
+            this.btnKronometre.TextColor = System.Drawing.Color.White;
+            this.btnKronometre.UseVisualStyleBackColor = false;
+            // 
+            // btnSu
+            // 
+            this.btnSu.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnSu.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnSu.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSu.BorderRadius = 20;
+            this.btnSu.BorderSize = 0;
+            this.btnSu.FlatAppearance.BorderSize = 0;
+            this.btnSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSu.ForeColor = System.Drawing.Color.White;
+            this.btnSu.Location = new System.Drawing.Point(15, 168);
+            this.btnSu.Name = "btnSu";
+            this.btnSu.Size = new System.Drawing.Size(171, 40);
+            this.btnSu.TabIndex = 9;
+            this.btnSu.Text = "Su Takibi";
+            this.btnSu.TextColor = System.Drawing.Color.White;
+            this.btnSu.UseVisualStyleBackColor = false;
+            // 
+            // btnAdimSayisi
+            // 
+            this.btnAdimSayisi.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnAdimSayisi.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnAdimSayisi.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnAdimSayisi.BorderRadius = 20;
+            this.btnAdimSayisi.BorderSize = 0;
+            this.btnAdimSayisi.FlatAppearance.BorderSize = 0;
+            this.btnAdimSayisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdimSayisi.ForeColor = System.Drawing.Color.White;
+            this.btnAdimSayisi.Location = new System.Drawing.Point(17, 111);
+            this.btnAdimSayisi.Name = "btnAdimSayisi";
+            this.btnAdimSayisi.Size = new System.Drawing.Size(169, 40);
+            this.btnAdimSayisi.TabIndex = 9;
+            this.btnAdimSayisi.Text = "Adım Sayısı";
+            this.btnAdimSayisi.TextColor = System.Drawing.Color.White;
+            this.btnAdimSayisi.UseVisualStyleBackColor = false;
+            // 
+            // btnOgunGirisi
+            // 
+            this.btnOgunGirisi.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnOgunGirisi.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnOgunGirisi.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnOgunGirisi.BorderRadius = 20;
+            this.btnOgunGirisi.BorderSize = 0;
+            this.btnOgunGirisi.FlatAppearance.BorderSize = 0;
+            this.btnOgunGirisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOgunGirisi.ForeColor = System.Drawing.Color.White;
+            this.btnOgunGirisi.Location = new System.Drawing.Point(15, 56);
+            this.btnOgunGirisi.Name = "btnOgunGirisi";
+            this.btnOgunGirisi.Size = new System.Drawing.Size(171, 40);
+            this.btnOgunGirisi.TabIndex = 9;
+            this.btnOgunGirisi.Text = "Öğün Girişi";
+            this.btnOgunGirisi.TextColor = System.Drawing.Color.White;
+            this.btnOgunGirisi.UseVisualStyleBackColor = false;
             // 
             // label11
             // 
@@ -131,6 +259,29 @@
             this.grpKalori.TabIndex = 3;
             this.grpKalori.TabStop = false;
             this.grpKalori.Text = "Kalori:";
+            // 
+            // circularProgressBar1
+            // 
+            this.circularProgressBar1.BackColor = System.Drawing.Color.Silver;
+            this.circularProgressBar1.BarColor1 = System.Drawing.Color.Blue;
+            this.circularProgressBar1.BarColor2 = System.Drawing.Color.Silver;
+            this.circularProgressBar1.BarWidth = 14F;
+            this.circularProgressBar1.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.circularProgressBar1.ForeColor = System.Drawing.Color.DimGray;
+            this.circularProgressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.circularProgressBar1.LineColor = System.Drawing.Color.SteelBlue;
+            this.circularProgressBar1.LineWidth = 1;
+            this.circularProgressBar1.Location = new System.Drawing.Point(69, 40);
+            this.circularProgressBar1.Maximum = ((long)(100));
+            this.circularProgressBar1.MinimumSize = new System.Drawing.Size(100, 100);
+            this.circularProgressBar1.Name = "circularProgressBar1";
+            this.circularProgressBar1.ProgressShape = CircularProgressBar._ProgressShape.Flat;
+            this.circularProgressBar1.Size = new System.Drawing.Size(159, 159);
+            this.circularProgressBar1.TabIndex = 6;
+            this.circularProgressBar1.Text = " 0\n %57";
+            this.circularProgressBar1.TextMode = CircularProgressBar._TextMode.Percentage;
+            this.circularProgressBar1.Value = ((long)(57));
+            this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_Click);
             // 
             // label12
             // 
@@ -186,6 +337,7 @@
             // grpSu
             // 
             this.grpSu.BackColor = System.Drawing.Color.Transparent;
+            this.grpSu.Controls.Add(this.circularProgressBar2);
             this.grpSu.Controls.Add(this.label5);
             this.grpSu.Controls.Add(this.lblSu);
             this.grpSu.Location = new System.Drawing.Point(218, 289);
@@ -198,19 +350,21 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(245, 22);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(247, 52);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(229, 19);
+            this.label5.Size = new System.Drawing.Size(228, 20);
             this.label5.TabIndex = 5;
-            this.label5.Text = "İçilmesi Gereken Su Miktarı:";
+            this.label5.Text = "İçilmesi Gereken Su Miktarı";
             // 
             // lblSu
             // 
             this.lblSu.AutoSize = true;
             this.lblSu.BackColor = System.Drawing.Color.Transparent;
-            this.lblSu.Location = new System.Drawing.Point(349, 41);
+            this.lblSu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSu.Location = new System.Drawing.Point(338, 83);
             this.lblSu.Name = "lblSu";
-            this.lblSu.Size = new System.Drawing.Size(27, 19);
+            this.lblSu.Size = new System.Drawing.Size(45, 35);
             this.lblSu.TabIndex = 5;
             this.lblSu.Text = "00";
             // 
@@ -361,155 +515,27 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // circularProgressBar1
+            // circularProgressBar2
             // 
-            this.circularProgressBar1.BackColor = System.Drawing.Color.Silver;
-            this.circularProgressBar1.BarColor1 = System.Drawing.Color.Blue;
-            this.circularProgressBar1.BarColor2 = System.Drawing.Color.Silver;
-            this.circularProgressBar1.BarWidth = 14F;
-            this.circularProgressBar1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.circularProgressBar1.ForeColor = System.Drawing.Color.DimGray;
-            this.circularProgressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.circularProgressBar1.LineColor = System.Drawing.Color.SteelBlue;
-            this.circularProgressBar1.LineWidth = 1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(69, 40);
-            this.circularProgressBar1.Maximum = ((long)(100));
-            this.circularProgressBar1.MinimumSize = new System.Drawing.Size(100, 100);
-            this.circularProgressBar1.Name = "circularProgressBar1";
-            this.circularProgressBar1.ProgressShape = CircularProgressBar._ProgressShape.Flat;
-            this.circularProgressBar1.Size = new System.Drawing.Size(159, 159);
-            this.circularProgressBar1.TabIndex = 6;
-            this.circularProgressBar1.Text = " 0\n %57";
-            this.circularProgressBar1.TextMode = CircularProgressBar._TextMode.Percentage;
-            this.circularProgressBar1.Value = ((long)(57));
-            this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_Click);
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.RosyBrown;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.RosyBrown;
-            this.rjButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton1.BackgroundImage")));
-            this.rjButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 22;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(18, 429);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(168, 51);
-            this.rjButton1.TabIndex = 10;
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // btnRaporlama
-            // 
-            this.btnRaporlama.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnRaporlama.BackgroundColor = System.Drawing.Color.RosyBrown;
-            this.btnRaporlama.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnRaporlama.BorderRadius = 20;
-            this.btnRaporlama.BorderSize = 0;
-            this.btnRaporlama.FlatAppearance.BorderSize = 0;
-            this.btnRaporlama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRaporlama.ForeColor = System.Drawing.Color.White;
-            this.btnRaporlama.Location = new System.Drawing.Point(15, 348);
-            this.btnRaporlama.Name = "btnRaporlama";
-            this.btnRaporlama.Size = new System.Drawing.Size(171, 40);
-            this.btnRaporlama.TabIndex = 9;
-            this.btnRaporlama.Text = "Raporlama";
-            this.btnRaporlama.TextColor = System.Drawing.Color.White;
-            this.btnRaporlama.UseVisualStyleBackColor = false;
-            // 
-            // btnEgzersiz
-            // 
-            this.btnEgzersiz.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnEgzersiz.BackgroundColor = System.Drawing.Color.RosyBrown;
-            this.btnEgzersiz.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnEgzersiz.BorderRadius = 20;
-            this.btnEgzersiz.BorderSize = 0;
-            this.btnEgzersiz.FlatAppearance.BorderSize = 0;
-            this.btnEgzersiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEgzersiz.ForeColor = System.Drawing.Color.White;
-            this.btnEgzersiz.Location = new System.Drawing.Point(17, 292);
-            this.btnEgzersiz.Name = "btnEgzersiz";
-            this.btnEgzersiz.Size = new System.Drawing.Size(169, 40);
-            this.btnEgzersiz.TabIndex = 9;
-            this.btnEgzersiz.Text = "Egzersizler";
-            this.btnEgzersiz.TextColor = System.Drawing.Color.White;
-            this.btnEgzersiz.UseVisualStyleBackColor = false;
-            // 
-            // btnKronometre
-            // 
-            this.btnKronometre.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnKronometre.BackgroundColor = System.Drawing.Color.RosyBrown;
-            this.btnKronometre.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnKronometre.BorderRadius = 20;
-            this.btnKronometre.BorderSize = 0;
-            this.btnKronometre.FlatAppearance.BorderSize = 0;
-            this.btnKronometre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKronometre.ForeColor = System.Drawing.Color.White;
-            this.btnKronometre.Location = new System.Drawing.Point(15, 229);
-            this.btnKronometre.Name = "btnKronometre";
-            this.btnKronometre.Size = new System.Drawing.Size(173, 40);
-            this.btnKronometre.TabIndex = 9;
-            this.btnKronometre.Text = "Kronometre";
-            this.btnKronometre.TextColor = System.Drawing.Color.White;
-            this.btnKronometre.UseVisualStyleBackColor = false;
-            // 
-            // btnSu
-            // 
-            this.btnSu.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnSu.BackgroundColor = System.Drawing.Color.RosyBrown;
-            this.btnSu.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnSu.BorderRadius = 20;
-            this.btnSu.BorderSize = 0;
-            this.btnSu.FlatAppearance.BorderSize = 0;
-            this.btnSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSu.ForeColor = System.Drawing.Color.White;
-            this.btnSu.Location = new System.Drawing.Point(15, 168);
-            this.btnSu.Name = "btnSu";
-            this.btnSu.Size = new System.Drawing.Size(171, 40);
-            this.btnSu.TabIndex = 9;
-            this.btnSu.Text = "Su Takibi";
-            this.btnSu.TextColor = System.Drawing.Color.White;
-            this.btnSu.UseVisualStyleBackColor = false;
-            // 
-            // btnAdimSayisi
-            // 
-            this.btnAdimSayisi.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnAdimSayisi.BackgroundColor = System.Drawing.Color.RosyBrown;
-            this.btnAdimSayisi.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnAdimSayisi.BorderRadius = 20;
-            this.btnAdimSayisi.BorderSize = 0;
-            this.btnAdimSayisi.FlatAppearance.BorderSize = 0;
-            this.btnAdimSayisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdimSayisi.ForeColor = System.Drawing.Color.White;
-            this.btnAdimSayisi.Location = new System.Drawing.Point(17, 111);
-            this.btnAdimSayisi.Name = "btnAdimSayisi";
-            this.btnAdimSayisi.Size = new System.Drawing.Size(169, 40);
-            this.btnAdimSayisi.TabIndex = 9;
-            this.btnAdimSayisi.Text = "Adım Sayısı";
-            this.btnAdimSayisi.TextColor = System.Drawing.Color.White;
-            this.btnAdimSayisi.UseVisualStyleBackColor = false;
-            // 
-            // btnOgunGirisi
-            // 
-            this.btnOgunGirisi.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnOgunGirisi.BackgroundColor = System.Drawing.Color.RosyBrown;
-            this.btnOgunGirisi.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btnOgunGirisi.BorderRadius = 20;
-            this.btnOgunGirisi.BorderSize = 0;
-            this.btnOgunGirisi.FlatAppearance.BorderSize = 0;
-            this.btnOgunGirisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOgunGirisi.ForeColor = System.Drawing.Color.White;
-            this.btnOgunGirisi.Location = new System.Drawing.Point(15, 56);
-            this.btnOgunGirisi.Name = "btnOgunGirisi";
-            this.btnOgunGirisi.Size = new System.Drawing.Size(171, 40);
-            this.btnOgunGirisi.TabIndex = 9;
-            this.btnOgunGirisi.Text = "Öğün Girişi";
-            this.btnOgunGirisi.TextColor = System.Drawing.Color.White;
-            this.btnOgunGirisi.UseVisualStyleBackColor = false;
+            this.circularProgressBar2.BackColor = System.Drawing.Color.Silver;
+            this.circularProgressBar2.BarColor1 = System.Drawing.Color.Blue;
+            this.circularProgressBar2.BarColor2 = System.Drawing.Color.Silver;
+            this.circularProgressBar2.BarWidth = 14F;
+            this.circularProgressBar2.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.circularProgressBar2.ForeColor = System.Drawing.Color.DimGray;
+            this.circularProgressBar2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.circularProgressBar2.LineColor = System.Drawing.Color.SteelBlue;
+            this.circularProgressBar2.LineWidth = 1;
+            this.circularProgressBar2.Location = new System.Drawing.Point(69, 41);
+            this.circularProgressBar2.Maximum = ((long)(100));
+            this.circularProgressBar2.MinimumSize = new System.Drawing.Size(100, 100);
+            this.circularProgressBar2.Name = "circularProgressBar2";
+            this.circularProgressBar2.ProgressShape = CircularProgressBar._ProgressShape.Flat;
+            this.circularProgressBar2.Size = new System.Drawing.Size(165, 165);
+            this.circularProgressBar2.TabIndex = 6;
+            this.circularProgressBar2.Text = " 0\n %57";
+            this.circularProgressBar2.TextMode = CircularProgressBar._TextMode.Percentage;
+            this.circularProgressBar2.Value = ((long)(57));
             // 
             // Menü
             // 
@@ -587,5 +613,6 @@
         private CircularProgressBar circularProgressBar1;
         private System.Windows.Forms.Timer timer1;
         private CustomControls.RJControls.RJButton rjButton1;
+        private CircularProgressBar circularProgressBar2;
     }
 }

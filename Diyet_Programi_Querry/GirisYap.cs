@@ -31,7 +31,8 @@ namespace Diyet_Programi_Querry
             this.Close();
         }
 
-        private void btnGirisYap_Click(object sender, EventArgs e)
+
+        private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
 
         }

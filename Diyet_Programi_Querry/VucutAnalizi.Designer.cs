@@ -46,9 +46,9 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,12 +58,12 @@
             this.lblBMH.BackColor = System.Drawing.Color.Transparent;
             this.lblBMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBMH.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBMH.Location = new System.Drawing.Point(668, 210);
+            this.lblBMH.Location = new System.Drawing.Point(683, 181);
             this.lblBMH.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBMH.Name = "lblBMH";
-            this.lblBMH.Size = new System.Drawing.Size(13, 20);
+            this.lblBMH.Size = new System.Drawing.Size(34, 25);
             this.lblBMH.TabIndex = 60;
-            this.lblBMH.Text = " ";
+            this.lblBMH.Text = "00";
             // 
             // lblVKI
             // 
@@ -71,12 +71,12 @@
             this.lblVKI.BackColor = System.Drawing.Color.Transparent;
             this.lblVKI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblVKI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblVKI.Location = new System.Drawing.Point(632, 152);
+            this.lblVKI.Location = new System.Drawing.Point(641, 152);
             this.lblVKI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVKI.Name = "lblVKI";
-            this.lblVKI.Size = new System.Drawing.Size(13, 20);
+            this.lblVKI.Size = new System.Drawing.Size(39, 25);
             this.lblVKI.TabIndex = 58;
-            this.lblVKI.Text = " ";
+            this.lblVKI.Text = " 00";
             // 
             // pictureBox1
             // 
@@ -96,11 +96,11 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label15.Location = new System.Drawing.Point(424, 80);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(111, 22);
+            this.label15.Size = new System.Drawing.Size(140, 26);
             this.label15.TabIndex = 56;
             this.label15.Text = "Sonuçlarınız";
             // 
@@ -108,12 +108,12 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(212, 27);
+            this.label13.Location = new System.Drawing.Point(13, 9);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(184, 31);
+            this.label13.Size = new System.Drawing.Size(228, 39);
             this.label13.TabIndex = 54;
             this.label13.Text = "Vücut Analizi";
             // 
@@ -126,7 +126,7 @@
             this.label9.Location = new System.Drawing.Point(436, 150);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(164, 20);
+            this.label9.Size = new System.Drawing.Size(204, 25);
             this.label9.TabIndex = 51;
             this.label9.Text = "Vücut Kitle İndeksiniz:";
             // 
@@ -139,7 +139,7 @@
             this.label8.Location = new System.Drawing.Point(436, 181);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(197, 20);
+            this.label8.Size = new System.Drawing.Size(245, 25);
             this.label8.TabIndex = 53;
             this.label8.Text = "Bazal Metabolizma Hızınız:";
             // 
@@ -148,11 +148,11 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label14.Location = new System.Drawing.Point(16, 80);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 22);
+            this.label14.Size = new System.Drawing.Size(126, 26);
             this.label14.TabIndex = 67;
             this.label14.Text = "Bilgileriniz";
             // 
@@ -162,7 +162,7 @@
             this.txtKilo.Location = new System.Drawing.Point(166, 173);
             this.txtKilo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtKilo.Name = "txtKilo";
-            this.txtKilo.Size = new System.Drawing.Size(185, 22);
+            this.txtKilo.Size = new System.Drawing.Size(185, 26);
             this.txtKilo.TabIndex = 65;
             // 
             // txtBoy
@@ -171,7 +171,7 @@
             this.txtBoy.Location = new System.Drawing.Point(166, 133);
             this.txtBoy.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtBoy.Name = "txtBoy";
-            this.txtBoy.Size = new System.Drawing.Size(185, 22);
+            this.txtBoy.Size = new System.Drawing.Size(185, 26);
             this.txtBoy.TabIndex = 64;
             // 
             // label3
@@ -183,7 +183,7 @@
             this.label3.Location = new System.Drawing.Point(16, 209);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 20);
+            this.label3.Size = new System.Drawing.Size(129, 25);
             this.label3.TabIndex = 63;
             this.label3.Text = "Doğum Tarihi";
             // 
@@ -196,7 +196,7 @@
             this.label2.Location = new System.Drawing.Point(16, 170);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(61, 25);
             this.label2.TabIndex = 62;
             this.label2.Text = "Kilo : ";
             // 
@@ -209,7 +209,7 @@
             this.label1.Location = new System.Drawing.Point(16, 129);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.Size = new System.Drawing.Size(62, 25);
             this.label1.TabIndex = 61;
             this.label1.Text = "Boy : ";
             // 
@@ -221,7 +221,7 @@
             this.radioButton1.Location = new System.Drawing.Point(174, 256);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(68, 24);
+            this.radioButton1.Size = new System.Drawing.Size(83, 29);
             this.radioButton1.TabIndex = 68;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Erkek";
@@ -235,7 +235,7 @@
             this.radioButton2.Location = new System.Drawing.Point(260, 256);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(67, 24);
+            this.radioButton2.Size = new System.Drawing.Size(84, 29);
             this.radioButton2.TabIndex = 68;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Kadın";
@@ -250,7 +250,7 @@
             this.label4.Location = new System.Drawing.Point(16, 256);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 20);
+            this.label4.Size = new System.Drawing.Size(98, 25);
             this.label4.TabIndex = 63;
             this.label4.Text = "Cinsiyet : ";
             // 
@@ -260,22 +260,8 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(166, 212);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(185, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(185, 24);
             this.dateTimePicker1.TabIndex = 69;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(166, 305);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 39);
-            this.button1.TabIndex = 70;
-            this.button1.Text = "HESAPLA";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -288,10 +274,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(21, 387);
+            this.button2.Location = new System.Drawing.Point(21, 388);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 62);
+            this.button2.Size = new System.Drawing.Size(93, 63);
             this.button2.TabIndex = 71;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -306,23 +292,41 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(552, 389);
+            this.button3.Location = new System.Drawing.Point(651, 388);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 62);
             this.button3.TabIndex = 71;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 20;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(166, 305);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(185, 57);
+            this.rjButton1.TabIndex = 72;
+            this.rjButton1.Text = "HESAPLA";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
             // VucutAnalizi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(693, 463);
+            this.ClientSize = new System.Drawing.Size(757, 462);
+            this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -370,8 +374,8 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private CustomControls.RJControls.RJButton rjButton1;
     }
 }
