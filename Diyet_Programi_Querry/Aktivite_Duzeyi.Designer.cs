@@ -33,9 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.btnBirKacGünEgzersiz = new CustomControls.RJControls.RJButton();
-            this.btnDortGun = new CustomControls.RJControls.RJButton();
-            this.btnAltiGun = new CustomControls.RJControls.RJButton();
+            this.btnAzHareketli = new CustomControls.RJControls.RJButton();
+            this.btnHareketli = new CustomControls.RJControls.RJButton();
+            this.btnCokHareketli = new CustomControls.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // label1
@@ -98,59 +98,59 @@
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
-            // btnBirKacGünEgzersiz
+            // btnAzHareketli
             // 
-            this.btnBirKacGünEgzersiz.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnBirKacGünEgzersiz.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnBirKacGünEgzersiz.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnBirKacGünEgzersiz.BorderRadius = 12;
-            this.btnBirKacGünEgzersiz.BorderSize = 0;
-            this.btnBirKacGünEgzersiz.FlatAppearance.BorderSize = 0;
-            this.btnBirKacGünEgzersiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBirKacGünEgzersiz.ForeColor = System.Drawing.Color.White;
-            this.btnBirKacGünEgzersiz.Location = new System.Drawing.Point(75, 190);
-            this.btnBirKacGünEgzersiz.Name = "btnBirKacGünEgzersiz";
-            this.btnBirKacGünEgzersiz.Size = new System.Drawing.Size(344, 65);
-            this.btnBirKacGünEgzersiz.TabIndex = 8;
-            this.btnBirKacGünEgzersiz.Text = "HAFTADA 1-3 GÜN";
-            this.btnBirKacGünEgzersiz.TextColor = System.Drawing.Color.White;
-            this.btnBirKacGünEgzersiz.UseVisualStyleBackColor = false;
+            this.btnAzHareketli.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAzHareketli.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAzHareketli.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAzHareketli.BorderRadius = 12;
+            this.btnAzHareketli.BorderSize = 0;
+            this.btnAzHareketli.FlatAppearance.BorderSize = 0;
+            this.btnAzHareketli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAzHareketli.ForeColor = System.Drawing.Color.White;
+            this.btnAzHareketli.Location = new System.Drawing.Point(75, 190);
+            this.btnAzHareketli.Name = "btnAzHareketli";
+            this.btnAzHareketli.Size = new System.Drawing.Size(344, 65);
+            this.btnAzHareketli.TabIndex = 8;
+            this.btnAzHareketli.Text = "AZ HAREKETLİ";
+            this.btnAzHareketli.TextColor = System.Drawing.Color.White;
+            this.btnAzHareketli.UseVisualStyleBackColor = false;
             // 
-            // btnDortGun
+            // btnHareketli
             // 
-            this.btnDortGun.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDortGun.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnDortGun.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDortGun.BorderRadius = 12;
-            this.btnDortGun.BorderSize = 0;
-            this.btnDortGun.FlatAppearance.BorderSize = 0;
-            this.btnDortGun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDortGun.ForeColor = System.Drawing.Color.White;
-            this.btnDortGun.Location = new System.Drawing.Point(75, 276);
-            this.btnDortGun.Name = "btnDortGun";
-            this.btnDortGun.Size = new System.Drawing.Size(344, 65);
-            this.btnDortGun.TabIndex = 8;
-            this.btnDortGun.Text = "HAFTADA 4-5 GÜN";
-            this.btnDortGun.TextColor = System.Drawing.Color.White;
-            this.btnDortGun.UseVisualStyleBackColor = false;
+            this.btnHareketli.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHareketli.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHareketli.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHareketli.BorderRadius = 12;
+            this.btnHareketli.BorderSize = 0;
+            this.btnHareketli.FlatAppearance.BorderSize = 0;
+            this.btnHareketli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHareketli.ForeColor = System.Drawing.Color.White;
+            this.btnHareketli.Location = new System.Drawing.Point(75, 276);
+            this.btnHareketli.Name = "btnHareketli";
+            this.btnHareketli.Size = new System.Drawing.Size(344, 65);
+            this.btnHareketli.TabIndex = 8;
+            this.btnHareketli.Text = "HAREKETLİ";
+            this.btnHareketli.TextColor = System.Drawing.Color.White;
+            this.btnHareketli.UseVisualStyleBackColor = false;
             // 
-            // btnAltiGun
+            // btnCokHareketli
             // 
-            this.btnAltiGun.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAltiGun.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnAltiGun.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAltiGun.BorderRadius = 12;
-            this.btnAltiGun.BorderSize = 0;
-            this.btnAltiGun.FlatAppearance.BorderSize = 0;
-            this.btnAltiGun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAltiGun.ForeColor = System.Drawing.Color.White;
-            this.btnAltiGun.Location = new System.Drawing.Point(75, 362);
-            this.btnAltiGun.Name = "btnAltiGun";
-            this.btnAltiGun.Size = new System.Drawing.Size(344, 65);
-            this.btnAltiGun.TabIndex = 8;
-            this.btnAltiGun.Text = "HAFTADA 6-7 GÜN";
-            this.btnAltiGun.TextColor = System.Drawing.Color.White;
-            this.btnAltiGun.UseVisualStyleBackColor = false;
+            this.btnCokHareketli.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCokHareketli.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCokHareketli.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCokHareketli.BorderRadius = 12;
+            this.btnCokHareketli.BorderSize = 0;
+            this.btnCokHareketli.FlatAppearance.BorderSize = 0;
+            this.btnCokHareketli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCokHareketli.ForeColor = System.Drawing.Color.White;
+            this.btnCokHareketli.Location = new System.Drawing.Point(75, 362);
+            this.btnCokHareketli.Name = "btnCokHareketli";
+            this.btnCokHareketli.Size = new System.Drawing.Size(344, 65);
+            this.btnCokHareketli.TabIndex = 8;
+            this.btnCokHareketli.Text = "ÇOK HAREKETLİ";
+            this.btnCokHareketli.TextColor = System.Drawing.Color.White;
+            this.btnCokHareketli.UseVisualStyleBackColor = false;
             // 
             // Aktivite_Duzeyi
             // 
@@ -159,9 +159,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(514, 571);
-            this.Controls.Add(this.btnAltiGun);
-            this.Controls.Add(this.btnDortGun);
-            this.Controls.Add(this.btnBirKacGünEgzersiz);
+            this.Controls.Add(this.btnCokHareketli);
+            this.Controls.Add(this.btnHareketli);
+            this.Controls.Add(this.btnAzHareketli);
             this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label2);
@@ -180,8 +180,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button5;
         private CustomControls.RJControls.RJButton rjButton1;
-        private CustomControls.RJControls.RJButton btnBirKacGünEgzersiz;
-        private CustomControls.RJControls.RJButton btnDortGun;
-        private CustomControls.RJControls.RJButton btnAltiGun;
+        private CustomControls.RJControls.RJButton btnAzHareketli;
+        private CustomControls.RJControls.RJButton btnHareketli;
+        private CustomControls.RJControls.RJButton btnCokHareketli;
     }
 }
