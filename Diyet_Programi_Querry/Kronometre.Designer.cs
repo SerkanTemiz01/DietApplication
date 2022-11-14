@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kronometre));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,10 +38,11 @@
             this.lblSaniye = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBasla = new System.Windows.Forms.Button();
+            this.btnDur = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +54,7 @@
             this.label1.Location = new System.Drawing.Point(37, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 22);
+            this.label1.Size = new System.Drawing.Size(57, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Saat";
             // 
@@ -65,7 +67,7 @@
             this.label2.Location = new System.Drawing.Point(130, 45);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 22);
+            this.label2.Size = new System.Drawing.Size(86, 26);
             this.label2.TabIndex = 0;
             this.label2.Text = "Dakika";
             // 
@@ -78,7 +80,7 @@
             this.label3.Location = new System.Drawing.Point(233, 45);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 22);
+            this.label3.Size = new System.Drawing.Size(80, 26);
             this.label3.TabIndex = 0;
             this.label3.Text = "Saniye";
             // 
@@ -91,7 +93,7 @@
             this.lblSaat.Location = new System.Drawing.Point(45, 77);
             this.lblSaat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSaat.Name = "lblSaat";
-            this.lblSaat.Size = new System.Drawing.Size(30, 22);
+            this.lblSaat.Size = new System.Drawing.Size(36, 26);
             this.lblSaat.TabIndex = 0;
             this.lblSaat.Text = "00";
             // 
@@ -104,7 +106,7 @@
             this.lblDakika.Location = new System.Drawing.Point(144, 77);
             this.lblDakika.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDakika.Name = "lblDakika";
-            this.lblDakika.Size = new System.Drawing.Size(30, 22);
+            this.lblDakika.Size = new System.Drawing.Size(36, 26);
             this.lblDakika.TabIndex = 0;
             this.lblDakika.Text = "00";
             // 
@@ -117,7 +119,7 @@
             this.lblSaniye.Location = new System.Drawing.Point(248, 77);
             this.lblSaniye.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSaniye.Name = "lblSaniye";
-            this.lblSaniye.Size = new System.Drawing.Size(30, 22);
+            this.lblSaniye.Size = new System.Drawing.Size(36, 26);
             this.lblSaniye.TabIndex = 0;
             this.lblSaniye.Text = "00";
             // 
@@ -130,7 +132,7 @@
             this.label7.Location = new System.Drawing.Point(94, 77);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(15, 22);
+            this.label7.Size = new System.Drawing.Size(20, 26);
             this.label7.TabIndex = 0;
             this.label7.Text = ":";
             // 
@@ -143,42 +145,45 @@
             this.label8.Location = new System.Drawing.Point(207, 77);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(15, 22);
+            this.label8.Size = new System.Drawing.Size(20, 26);
             this.label8.TabIndex = 0;
             this.label8.Text = ":";
             // 
-            // button1
+            // btnBasla
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(21, 105);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Başla";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBasla.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBasla.Location = new System.Drawing.Point(21, 105);
+            this.btnBasla.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnBasla.Name = "btnBasla";
+            this.btnBasla.Size = new System.Drawing.Size(77, 32);
+            this.btnBasla.TabIndex = 1;
+            this.btnBasla.Text = "Başla";
+            this.btnBasla.UseVisualStyleBackColor = true;
+            this.btnBasla.Click += new System.EventHandler(this.btnBasla_Click);
             // 
-            // button2
+            // btnDur
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(124, 105);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 32);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Dur";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDur.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDur.Location = new System.Drawing.Point(124, 105);
+            this.btnDur.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDur.Name = "btnDur";
+            this.btnDur.Size = new System.Drawing.Size(81, 32);
+            this.btnDur.TabIndex = 1;
+            this.btnDur.Text = "Dur";
+            this.btnDur.UseVisualStyleBackColor = true;
+            this.btnDur.Click += new System.EventHandler(this.btnDur_Click);
             // 
-            // button3
+            // btnReset
             // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(232, 105);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 32);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Reset";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnReset.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnReset.Location = new System.Drawing.Point(232, 105);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(76, 32);
+            this.btnReset.TabIndex = 1;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // button4
             // 
@@ -197,17 +202,21 @@
             this.button4.TabIndex = 72;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Kronometre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(489, 233);
+            this.ClientSize = new System.Drawing.Size(342, 233);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnDur);
+            this.Controls.Add(this.btnBasla);
             this.Controls.Add(this.lblSaniye);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblDakika);
@@ -216,6 +225,7 @@
             this.Controls.Add(this.lblSaat);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Kronometre";
@@ -235,9 +245,10 @@
         private System.Windows.Forms.Label lblSaniye;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBasla;
+        private System.Windows.Forms.Button btnDur;
+        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Timer timer1;
     }
 }

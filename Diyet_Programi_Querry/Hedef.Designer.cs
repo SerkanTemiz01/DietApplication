@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hedef));
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnKiloVermek = new CustomControls.RJControls.RJButton();
+            this.btnKilomuKorumak = new CustomControls.RJControls.RJButton();
+            this.btnKiloAlmak = new CustomControls.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // label1
@@ -44,45 +44,9 @@
             this.label1.Location = new System.Drawing.Point(48, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 29);
+            this.label1.Size = new System.Drawing.Size(263, 36);
             this.label1.TabIndex = 5;
             this.label1.Text = "HEDEFİN NEDİR?";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(50, 396);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(229, 83);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "KİLO ALMAK";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(50, 263);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(229, 83);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "KİLOMU KORUMAK";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(50, 133);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 83);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "KİLO VERMEK";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -95,25 +59,79 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(13, 495);
+            this.button4.Location = new System.Drawing.Point(13, 459);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 77);
             this.button4.TabIndex = 7;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // btnKiloVermek
+            // 
+            this.btnKiloVermek.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnKiloVermek.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnKiloVermek.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnKiloVermek.BorderRadius = 20;
+            this.btnKiloVermek.BorderSize = 0;
+            this.btnKiloVermek.FlatAppearance.BorderSize = 0;
+            this.btnKiloVermek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKiloVermek.ForeColor = System.Drawing.Color.White;
+            this.btnKiloVermek.Location = new System.Drawing.Point(43, 142);
+            this.btnKiloVermek.Name = "btnKiloVermek";
+            this.btnKiloVermek.Size = new System.Drawing.Size(251, 64);
+            this.btnKiloVermek.TabIndex = 8;
+            this.btnKiloVermek.Text = "KİLO VERMEK";
+            this.btnKiloVermek.TextColor = System.Drawing.Color.White;
+            this.btnKiloVermek.UseVisualStyleBackColor = false;
+            // 
+            // btnKilomuKorumak
+            // 
+            this.btnKilomuKorumak.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnKilomuKorumak.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnKilomuKorumak.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnKilomuKorumak.BorderRadius = 20;
+            this.btnKilomuKorumak.BorderSize = 0;
+            this.btnKilomuKorumak.FlatAppearance.BorderSize = 0;
+            this.btnKilomuKorumak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKilomuKorumak.ForeColor = System.Drawing.Color.White;
+            this.btnKilomuKorumak.Location = new System.Drawing.Point(43, 240);
+            this.btnKilomuKorumak.Name = "btnKilomuKorumak";
+            this.btnKilomuKorumak.Size = new System.Drawing.Size(251, 68);
+            this.btnKilomuKorumak.TabIndex = 8;
+            this.btnKilomuKorumak.Text = "KİLOMU KORUMAK";
+            this.btnKilomuKorumak.TextColor = System.Drawing.Color.White;
+            this.btnKilomuKorumak.UseVisualStyleBackColor = false;
+            // 
+            // btnKiloAlmak
+            // 
+            this.btnKiloAlmak.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnKiloAlmak.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnKiloAlmak.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnKiloAlmak.BorderRadius = 20;
+            this.btnKiloAlmak.BorderSize = 0;
+            this.btnKiloAlmak.FlatAppearance.BorderSize = 0;
+            this.btnKiloAlmak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKiloAlmak.ForeColor = System.Drawing.Color.White;
+            this.btnKiloAlmak.Location = new System.Drawing.Point(43, 348);
+            this.btnKiloAlmak.Name = "btnKiloAlmak";
+            this.btnKiloAlmak.Size = new System.Drawing.Size(251, 68);
+            this.btnKiloAlmak.TabIndex = 8;
+            this.btnKiloAlmak.Text = "KİLO ALMAK";
+            this.btnKiloAlmak.TextColor = System.Drawing.Color.White;
+            this.btnKiloAlmak.UseVisualStyleBackColor = false;
+            // 
             // Hedef
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(361, 584);
+            this.ClientSize = new System.Drawing.Size(361, 543);
+            this.Controls.Add(this.btnKiloAlmak);
+            this.Controls.Add(this.btnKilomuKorumak);
+            this.Controls.Add(this.btnKiloVermek);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Hedef";
@@ -126,9 +144,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private CustomControls.RJControls.RJButton btnKiloVermek;
+        private CustomControls.RJControls.RJButton btnKilomuKorumak;
+        private CustomControls.RJControls.RJButton btnKiloAlmak;
     }
 }
