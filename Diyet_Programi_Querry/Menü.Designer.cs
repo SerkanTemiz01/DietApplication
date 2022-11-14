@@ -312,7 +312,7 @@
             this.lblKalori.Size = new System.Drawing.Size(45, 34);
             this.lblKalori.TabIndex = 5;
             this.lblKalori.Text = "00";
-            this.lblKalori.Click += new System.EventHandler(this.lblKalori_Click);
+            this.lblKalori.Click += new System.EventHandler(this.lblKilo_Click);
             // 
             // label10
             // 

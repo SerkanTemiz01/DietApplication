@@ -19,19 +19,19 @@ namespace Diyet_Programi_Querry
             InitializeComponent();
         }
 
-        private void lblKalori_Click(object sender, EventArgs e)
+        private void lblHarcananKalori_Click(object sender, EventArgs e)
         {
             //asadajjcjajakkkaas26626
         }
 
         private void Menü_Load(object sender, EventArgs e)
         {
-            long kalori = 2050;
+            long HarcananKalori = 2050;
             pnlMenu.Visible = false;
             circularProgressBar1.Value = 75;
             circularProgressBar1.alinanKalori = 1345;
             lblEgzersizKalori.Text = "500";
-            lblKalori.Text=kalori.ToString();
+            lblKalori.Text=HarcananKalori.ToString();
             lblBoy.Text = "178";
             lblAdSoyad.Text = "Serkan Temiz";
             lblKilo.Text = "75";

@@ -41,7 +41,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAktiviteDuzeyi.cs" />
+    <Compile Include="Abstract\IBaseEntity.cs" />
+    <Compile Include="Abstract\IBesinler.cs" />
+    <Compile Include="Abstract\IEgzersizler.cs" />
+    <Compile Include="Abstract\IKullaniciBilgisi.cs" />
+    <Compile Include="Abstract\IKullaniciHedef.cs" />
+    <Compile Include="Abstract\IRapor.cs" />
+    <Compile Include="Abstract\ISuTakibi.cs" />
+    <Compile Include="Abstract\ITuketilenBesinler.cs" />
+    <Compile Include="Abstract\IVucutAnalizi.cs" />
+    <Compile Include="Concrete\AktiviteDuzeyi.cs" />
+    <Compile Include="Concrete\Besinler.cs" />
+    <Compile Include="Concrete\KullaniciBilgisi.cs" />
+    <Compile Include="Concrete\Egzersizler.cs" />
+    <Compile Include="Concrete\KullaniciHedef.cs" />
+    <Compile Include="Concrete\Rapor.cs" />
+    <Compile Include="Concrete\SuTakibi.cs" />
+    <Compile Include="Concrete\TuketilenBesinler.cs" />
+    <Compile Include="Concrete\VucutAnalizi.cs" />
+    <Compile Include="Enums\AktiviteDuzeyiEnum.cs" />
+    <Compile Include="Enums\Cinsiyet.cs" />
+    <Compile Include="Enums\Egzersiz.cs" />
+    <Compile Include="Enums\Hedef.cs" />
+    <Compile Include="Enums\Netice.cs" />
+    <Compile Include="Enums\Ogun.cs" />
+    <Compile Include="Enums\Status.cs" />
+    <Compile Include="KullaniciBilgisi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
