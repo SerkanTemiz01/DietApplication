@@ -16,7 +16,7 @@ namespace Diyet_Programi_Querry
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menü());
+            Application.Run(new SuEkle());
         }
     }
 }
