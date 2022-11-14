@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(48, 58);
+            this.label1.Location = new System.Drawing.Point(102, 87);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(263, 36);
@@ -59,10 +59,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(13, 459);
+            this.button4.Location = new System.Drawing.Point(13, 503);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 77);
+            this.button4.Size = new System.Drawing.Size(83, 63);
             this.button4.TabIndex = 7;
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -76,7 +76,7 @@
             this.btnKiloVermek.FlatAppearance.BorderSize = 0;
             this.btnKiloVermek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKiloVermek.ForeColor = System.Drawing.Color.White;
-            this.btnKiloVermek.Location = new System.Drawing.Point(43, 142);
+            this.btnKiloVermek.Location = new System.Drawing.Point(97, 171);
             this.btnKiloVermek.Name = "btnKiloVermek";
             this.btnKiloVermek.Size = new System.Drawing.Size(251, 64);
             this.btnKiloVermek.TabIndex = 8;
@@ -94,7 +94,7 @@
             this.btnKilomuKorumak.FlatAppearance.BorderSize = 0;
             this.btnKilomuKorumak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKilomuKorumak.ForeColor = System.Drawing.Color.White;
-            this.btnKilomuKorumak.Location = new System.Drawing.Point(43, 240);
+            this.btnKilomuKorumak.Location = new System.Drawing.Point(97, 269);
             this.btnKilomuKorumak.Name = "btnKilomuKorumak";
             this.btnKilomuKorumak.Size = new System.Drawing.Size(251, 68);
             this.btnKilomuKorumak.TabIndex = 8;
@@ -112,7 +112,7 @@
             this.btnKiloAlmak.FlatAppearance.BorderSize = 0;
             this.btnKiloAlmak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKiloAlmak.ForeColor = System.Drawing.Color.White;
-            this.btnKiloAlmak.Location = new System.Drawing.Point(43, 348);
+            this.btnKiloAlmak.Location = new System.Drawing.Point(97, 377);
             this.btnKiloAlmak.Name = "btnKiloAlmak";
             this.btnKiloAlmak.Size = new System.Drawing.Size(251, 68);
             this.btnKiloAlmak.TabIndex = 8;
@@ -126,7 +126,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(361, 543);
+            this.ClientSize = new System.Drawing.Size(463, 578);
             this.Controls.Add(this.btnKiloAlmak);
             this.Controls.Add(this.btnKilomuKorumak);
             this.Controls.Add(this.btnKiloVermek);

@@ -220,16 +220,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\arkaplan.jpg" />
+    <Content Include="Resources\back.png" />
     <Content Include="Resources\exitPicture.png" />
     <Content Include="Resources\FitQUERYeNSON.gif" />
+    <Content Include="Resources\forward.png" />
     <Content Include="Resources\MicrosoftTeams-image %284%29.png" />
     <Content Include="Resources\MicrosoftTeams-image %285%29.png" />
     <Content Include="Resources\Bardak.png" />
+    <Content Include="Resources\MicrosoftTeams-image %289%29.png" />
+    <Content Include="Resources\play.png" />
     <Content Include="Resources\RaporArkaPlan.gif" />
+    <Content Include="Resources\replay.png" />
     <Content Include="Resources\saat.png" />
     <Content Include="Resources\spor.jpg" />
     <Content Include="Resources\spor2.jpg" />
     <Content Include="Resources\sporyapanfatih.png" />
+    <Content Include="Resources\stop.png" />
     <Content Include="Resources\undo_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
