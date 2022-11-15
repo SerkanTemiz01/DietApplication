@@ -12,10 +12,10 @@ namespace Entities.Abstract
     {
         int ID { get; set; }
 
-        int KullaniciID { get; set; }
+        int? KullaniciID { get; set; }
         KullaniciBilgisi Kullanici { get; set; }
 
-        int BesinBilgileriID { get; set; }
+        int? BesinBilgileriID { get; set; }
         Besinler BesinBilgileri { get; set; }
 
         Ogun Ogun { get; set; }

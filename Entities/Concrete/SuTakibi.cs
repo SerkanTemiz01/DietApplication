@@ -22,8 +22,8 @@ namespace Entities.Concrete
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;
-        public int KullaniciID { get ; set ; }
-        public Entities.KullaniciBilgisi KullaniciBilgisi { get ; set ; }
+        public int? KullaniciID { get ; set ; }
+        public KullaniciBilgisi KullaniciBilgisi { get ; set ; }
 
         public void SuMiktariBulma()
         {
