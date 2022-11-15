@@ -52,7 +52,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractRepository\IBaseRepository.cs" />
+    <Compile Include="ConcreteRepository\AktiviteDuzeyiRepository.cs" />
     <Compile Include="ConcreteRepository\BaseRepository.cs" />
+    <Compile Include="ConcreteRepository\BesinlerRepository.cs" />
+    <Compile Include="ConcreteRepository\EgzersizlerRepository.cs" />
+    <Compile Include="ConcreteRepository\KullaniciBilgisiRepository.cs" />
+    <Compile Include="ConcreteRepository\KullaniciHedefRepository.cs" />
+    <Compile Include="ConcreteRepository\RaporRepository.cs" />
+    <Compile Include="ConcreteRepository\SuTakibiRepository.cs" />
+    <Compile Include="ConcreteRepository\TuketilenBesinlerRepository.cs" />
+    <Compile Include="ConcreteRepository\VucutAnalizRepository.cs" />
     <Compile Include="Context\DietQueryDBContext.cs" />
     <Compile Include="Mapping\AktiviteDuzeyiMapping.cs" />
     <Compile Include="Mapping\BesinlerMapping.cs" />
