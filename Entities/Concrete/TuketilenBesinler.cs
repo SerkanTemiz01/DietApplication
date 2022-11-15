@@ -11,9 +11,9 @@ namespace Entities.Concrete
     public class TuketilenBesinler : IBaseEntity, ITuketilenBesinler
     {
         public int ID { get;set; }
-        public int KullaniciID { get;set; }
-        public Entities.KullaniciBilgisi Kullanici { get;set; }
-        public int BesinBilgileriID { get;set; }
+        public int? KullaniciID { get;set; }
+        public KullaniciBilgisi Kullanici { get;set; }
+        public int? BesinBilgileriID { get;set; }
         public Besinler BesinBilgileri { get;set; }
         public Ogun Ogun { get;set; }
         public DateTime TuketilenTarih { get;set; }

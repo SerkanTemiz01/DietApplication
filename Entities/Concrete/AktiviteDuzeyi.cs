@@ -13,7 +13,7 @@ namespace Entities.Concrete
         public int ID { get;set; }
         public AktiviteDuzeyiEnum AktiviteDuzeyi1 { get;set; }
         public float AktiviteKatsayisi { get;set; }
-        public List<Entities.KullaniciBilgisi> KullaniciBilgisi { get;set; }
+        public List<KullaniciBilgisi> KullaniciBilgisi { get;set; }
         public DateTime CreatedDate { get;set; }= DateTime.Now;
         public DateTime? ModifiedDate { get;set; }
         public DateTime? DeletedDate { get;set; }

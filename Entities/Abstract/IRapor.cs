@@ -1,4 +1,5 @@
-﻿using Entities.Enums;
+﻿using Entities.Concrete;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,9 @@ namespace Entities.Abstract
         /// </summary>
         Netice Netice { get; set; }
         DateTime VerilisTarihi { get; set; }
+
+        int? KullaniciID { get; set; }
+        KullaniciBilgisi KullaniciBilgisi { get; set; }
 
         void NetKaloriHesaplama();
 

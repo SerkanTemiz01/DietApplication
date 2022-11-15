@@ -19,7 +19,7 @@ namespace Entities.Concrete
         public DateTime DogumTarihi { get;set; }
         public Cinsiyet Cinsiyet { get;set; }
         public int KullaniciID { get;set; }
-        public Entities.KullaniciBilgisi KullaniciBilgisi { get;set; }
+        public KullaniciBilgisi KullaniciBilgisi { get;set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

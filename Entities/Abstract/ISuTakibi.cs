@@ -16,7 +16,7 @@ namespace Entities.Abstract
 
         DateTime TuketilenTarih { get; set; }
 
-        int KullaniciID { get; set; }
+        int? KullaniciID { get; set; }
         KullaniciBilgisi KullaniciBilgisi { get; set; }
 
         void SuMiktariBulma();
