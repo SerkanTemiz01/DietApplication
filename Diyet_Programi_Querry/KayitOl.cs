@@ -71,7 +71,7 @@ namespace Diyet_Programi_Querry
 
 
             DietQueryDBContext db = new DietQueryDBContext();
-            KullaniciBilgisi kullaniciBilgisi = db.KullaniciBilgisis.Where(x => x.Email == Email).SingleOrDefault();
+            KullaniciBilgisi kullaniciBilgisi = db.KullaniciBilgisis.Where(x => x.Email == Email).FirstOrDefault();
             if (kullaniciBilgisi == null)
             {
                 return true;
