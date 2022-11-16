@@ -17,7 +17,7 @@ namespace Entities.Concrete
         public string Soyad { get;set; }
         public string KullaniciAd { get;set; }
         public string Email { get;set; }
-        public string Sifre { get;set; }
+        public string Sifre { get;set; }  
         public List<Egzersizler> Egzersizlers { get;set; }
        // int EgzersizID { get;set; }
         //Egzersizler Egzersizler { get;set; }
@@ -25,8 +25,8 @@ namespace Entities.Concrete
         public AktiviteDuzeyi AktiviteDuzeyi { get;set; }
         public int? HedefID { get;set; }
         public KullaniciHedef KullaniciHedef { get;set; }
-        public int? VucutAnaliziID { get;set; }
-        public VucutAnalizi VucutAnalizi { get;set; }
+        //public int? VucutAnaliziID { get;set; }
+        //public VucutAnalizi VucutAnalizi { get;set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
@@ -37,5 +37,7 @@ namespace Entities.Concrete
         public List<SuTakibi> SuTakibis { get; set; }
         public List<Rapor> Rapors { get ; set ; }
         public List<TuketilenBesinler> TuketilenBesinlers { get ; set; }
+        public List<VucutAnalizi> VucutAnalizis { get; set; }
+
     }
 }

@@ -18,7 +18,7 @@ namespace Entities.Concrete
         public decimal Kilo { get;set; }
         public DateTime DogumTarihi { get;set; }
         public Cinsiyet Cinsiyet { get;set; }
-        public int KullaniciID { get;set; }
+        public int? KullaniciID { get;set; }
         public KullaniciBilgisi KullaniciBilgisi { get;set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
@@ -27,6 +27,8 @@ namespace Entities.Concrete
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;
+
+
 
         public void BMHBulma()
         {

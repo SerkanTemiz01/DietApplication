@@ -15,8 +15,10 @@ namespace DataAccess.Mapping
             this.Property(x => x.CreatedBy).HasMaxLength(25).HasColumnType("nvarchar");
             this.Property(x => x.DeletedBy).HasMaxLength(25).HasColumnType("nvarchar");
             this.Property(x => x.ModifiedBy).HasMaxLength(25).HasColumnType("nvarchar");
-            this.HasOptional(m => m.KullaniciBilgisi)
-                 .WithRequired(mr => mr.VucutAnalizi).WillCascadeOnDelete(false);
+
+
+            //this.HasOptional(m => m.KullaniciBilgisi)
+            //     .WithRequired(mr => mr.VucutAnalizi);
             ///+++
 
         }
