@@ -16,26 +16,18 @@ namespace Diyet_Programi_Querry
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            GirisYap gr = new GirisYap();
-            gr.Show();
-            this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnKayıtOl_Click(object sender, EventArgs e)
         {
             KayitOl kayitOl = new KayitOl();
             kayitOl.Show();
             this.Hide();
         }
 
-        
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+            GirisYap gr = new GirisYap();
+            gr.Show();
+            this.Hide();
+        }
     }
 }

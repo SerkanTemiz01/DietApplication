@@ -77,6 +77,7 @@
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.TextColor = System.Drawing.Color.White;
             this.btnGirisYap.UseVisualStyleBackColor = false;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // btnKayıtOl
             // 
@@ -95,6 +96,7 @@
             this.btnKayıtOl.Text = "Kayıt Ol";
             this.btnKayıtOl.TextColor = System.Drawing.Color.White;
             this.btnKayıtOl.UseVisualStyleBackColor = false;
+            this.btnKayıtOl.Click += new System.EventHandler(this.btnKayıtOl_Click);
             // 
             // Form1
             // 
@@ -112,7 +114,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
