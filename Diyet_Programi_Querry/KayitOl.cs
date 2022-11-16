@@ -20,49 +20,43 @@ namespace Diyet_Programi_Querry
     {
         private  DietQueryDBContext _dietQueryDBContext;
         private  KullaniciBilgisiRepository _kullaniciBilgisiRepository;
-
-
-
-
         public KayitOl()
         {
             InitializeComponent();
             _dietQueryDBContext = new DietQueryDBContext();
             _kullaniciBilgisiRepository = new KullaniciBilgisiRepository(_dietQueryDBContext);
         }
-
+        public static KullaniciBilgisi yeniKullanici;
         private void btnKayitOl_Click(object sender, EventArgs e)
         {
+            if (txtSifreUyeOl.Text == txtSifreTekrar.Text)
+            {
+                KullaniciBilgisi kb = new KullaniciBilgisi();
+                kb.Ad = txtAdUyeOl.Text.Trim();
+                kb.Soyad = txtSoyadUyeOl.Text.Trim();
 
-            KullaniciBilgisi kb = new KullaniciBilgisi();
-            kb.Ad = txtAdUyeOl.Text.Trim();
-            kb.Soyad = txtSoyadUyeOl.Text.Trim();
-            if (Kullanici(txtKullaniciAdi.Text)==true)
-            {
-                kb.KullaniciAd = txtKullaniciAdi.Text;
+                
+                if (Kullanici(txtKullaniciAdi.Text)&&EmailKontrol(txtEmailUyeOl.Text)&&Sifre(txtSifreUyeOl.Text))
+                {
+                    kb.KullaniciAd = txtKullaniciAdi.Text;
+                    kb.Email = txtEmailUyeOl.Text.Trim();
+                    kb.Sifre = txtSifreUyeOl.Text;
+                    yeniKullanici = kb;
+                    _kullaniciBilgisiRepository.Add(kb);
+                    MessageBox.Show("Başarılı bir şekilde kayıt gerçekleşmiştir");
+                    Aktivite_Duzeyi aktvForm = new Aktivite_Duzeyi();
+                    aktvForm.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Şifre istenildiği şekilde değildir");
+                }             
+               
             }
             else
-            {
-                txtKullaniciAdi.Clear();
-            }
-            if (EmailKontrol(txtEmailUyeOl.Text)==true)
-            {
-                kb.Email = txtEmailUyeOl.Text.Trim();
-            }
-            else
-            {
-                txtEmailUyeOl.Clear();
-            }
-            if (Sifre(txtSifreUyeOl.Text)==true)
-            {
-                kb.Sifre = txtSifreUyeOl.Text;
-            }
-            else
-            {
-                txtSifreUyeOl.Clear();
-                txtSifreTekrar.Clear();
-            }
-            _kullaniciBilgisiRepository.Add(kb);
+                MessageBox.Show("Şifreler uyuşmamaktadır");
+            
            
         }
         //-----------------------------------Mail var mı yok mu----------------------------------
@@ -104,34 +98,30 @@ namespace Diyet_Programi_Querry
 
         }
 
-
-
-
         //-------------------------------Şifre Kontrolü------------------------------
         private static int Minimum_Length = 8;
         private static int Maximum_Length = 25;
         private static int Upper_Case_length = 2;
         private static int Lower_Case_length = 2;
         private static int NonAlpha_length = 1;
-        private static int Numeric_length = 1;
-
-
-
+ 
         public static bool Sifre(string Parola)
         {
+            bool kontrol = true;
             if (Parola.Length < Minimum_Length)
-                return false;
+                kontrol= false;
             if (Parola.Length > Maximum_Length)
-                return false;
+                kontrol= false;
             if (UpperCaseCount(Parola) < Upper_Case_length)
-                return false;
-            if (NumericCount(Parola) < Numeric_length)
-                return false;
+                kontrol= false;
             if (LowerCaseCount(Parola) < Lower_Case_length)
-                return false;
+                kontrol= false;
             if (NonAlphaCount(Parola) < NonAlpha_length)
+                kontrol= false;
+            if (kontrol)
+                return true;
+            else
                 return false;
-            return true;
         }
 
         private static int UpperCaseCount(string Parola)
@@ -142,16 +132,17 @@ namespace Diyet_Programi_Querry
         {
             return Regex.Matches(Parola, "[a-z]").Count;
         }
-        private static int NumericCount(string Parola)
-        {
-            return Regex.Matches(Parola, "[0-9]").Count;
-        }
         private static int NonAlphaCount(string Parola)
         {
             return Regex.Matches(Parola, @"[^0-9a-zA-Z\._]").Count;
         }
 
-
+        private void btnGeriTusu_Click(object sender, EventArgs e)
+        {
+            GirisYap gr=new GirisYap();
+            gr.Show();
+            this.Close();
+        }
     }
 
 }
