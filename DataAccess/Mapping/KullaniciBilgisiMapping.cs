@@ -2,6 +2,7 @@
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.IO;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace DataAccess.Mapping
         public KullaniciBilgisiMapping()
         {
             this.HasKey(x => x.ID);
+            this.Property(x => x.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
+            
             this.Property(x => x.CreatedBy).HasMaxLength(25).HasColumnType("nvarchar");
             this.Property(x => x.DeletedBy).HasMaxLength(25).HasColumnType("nvarchar");
             this.Property(x => x.ModifiedBy).HasMaxLength(25).HasColumnType("nvarchar");
@@ -38,6 +41,12 @@ namespace DataAccess.Mapping
             //tüketilen besni birden çok kişi tüketebilir
             this.HasMany(x => x.TuketilenBesinlers)
           .WithOptional(x => x.Kullanici)
+          .HasForeignKey(x => x.KullaniciID);
+
+
+            //------------------
+            this.HasMany(x => x.VucutAnalizis)
+          .WithOptional(x => x.KullaniciBilgisi)
           .HasForeignKey(x => x.KullaniciID);
         }
     }

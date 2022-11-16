@@ -22,8 +22,8 @@ namespace Entities.Abstract
         int? HedefID { get; set; }
         KullaniciHedef KullaniciHedef { get; set; }
 
-        int? VucutAnaliziID { get; set; }
-        VucutAnalizi VucutAnalizi { get; set; }
+        //int? VucutAnaliziID { get; set; }
+        //VucutAnalizi VucutAnalizi { get; set; }
 
         List<SuTakibi> SuTakibis { get; set; }
 
@@ -31,5 +31,7 @@ namespace Entities.Abstract
         List<Rapor> Rapors { get; set; }
         //ekledik
         List<TuketilenBesinler> TuketilenBesinlers { get; set; }
+
+        List<VucutAnalizi> VucutAnalizis { get; set; }
     }
 }

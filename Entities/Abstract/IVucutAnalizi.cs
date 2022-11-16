@@ -24,7 +24,7 @@ namespace Entities.Abstract
 
         Cinsiyet Cinsiyet { get; set; }
 
-        int KullaniciID { get; set; }
+        int? KullaniciID { get; set; }
         KullaniciBilgisi KullaniciBilgisi { get; set; }
 
         void VKIBulma();

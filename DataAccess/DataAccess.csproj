@@ -76,10 +76,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Diyet_Programi_Querry\Diyet_Programi_Querry.csproj">
-      <Project>{e27fca82-4acf-4e98-ada9-fd4813d3ec5d}</Project>
-      <Name>Diyet_Programi_Querry</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{758d0a8e-f2ee-40b0-bf87-66b774cba1e3}</Project>
       <Name>Entities</Name>
@@ -89,7 +85,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

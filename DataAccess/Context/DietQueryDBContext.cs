@@ -13,7 +13,8 @@ namespace DataAccess.Context
     {
         public DietQueryDBContext():base("server=DESKTOP-491CL38\\YAYLALISERVER22;database=FitQUERYDB;Trusted_Connection=True;") 
         {
-            Database.SetInitializer(new DropCreateDatabaseAlways<DietQueryDBContext>());
+           
+
         }
         public DbSet<AktiviteDuzeyi> AktiviteDuzeyis { get; set; }
         public DbSet<Besinler> Besinlers { get; set; }
