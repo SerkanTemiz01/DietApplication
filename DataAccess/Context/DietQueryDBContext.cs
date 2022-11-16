@@ -11,7 +11,7 @@ namespace DataAccess.Context
 {
     public class DietQueryDBContext:DbContext
     {
-        public DietQueryDBContext():base("server=DESKTOP-491CL38\\YAYLALISERVER22;database=FitQUERYDB;Trusted_Connection=True;") 
+        public DietQueryDBContext():base("server=LAPTOP-H9PBUUIN\\MSSQLSERVER2019;database=Diyet_Querry;Trusted_Connection=True;") 
         {
            
 
