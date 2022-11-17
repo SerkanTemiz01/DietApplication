@@ -18,11 +18,11 @@ namespace Diyet_Programi_Querry
         {
             InitializeComponent();
         }
-
-
+        DietQueryDBContext db;
+        public static int gelenID;
         private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
-            DietQueryDBContext db = new DietQueryDBContext();
+             db = new DietQueryDBContext();
             KullaniciBilgisi kullaniciAdi = db.KullaniciBilgisis.Where(x => x.KullaniciAd == textBox1.Text).FirstOrDefault();
             KullaniciBilgisi kullaniciSifre = db.KullaniciBilgisis.Where(x => x.Sifre == textBox2.Text).FirstOrDefault();
             int hak = 3;
@@ -55,7 +55,7 @@ namespace Diyet_Programi_Querry
                 }
             } while (true);
 
-
+            gelenID = kullaniciAdi.ID;
         }
 
         private void btnGeri_Click_1(object sender, EventArgs e)

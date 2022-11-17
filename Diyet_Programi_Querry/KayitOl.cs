@@ -49,7 +49,7 @@ namespace Diyet_Programi_Querry
                     this.Close();
                 }
                 else
-                {
+                {                  
                     MessageBox.Show("Şifre istenildiği şekilde değildir");
                 }             
                
