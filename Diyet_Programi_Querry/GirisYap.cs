@@ -25,6 +25,7 @@ namespace Diyet_Programi_Querry
              db = new DietQueryDBContext();
             KullaniciBilgisi kullaniciAdi = db.KullaniciBilgisis.Where(x => x.KullaniciAd == textBox1.Text).FirstOrDefault();
             KullaniciBilgisi kullaniciSifre = db.KullaniciBilgisis.Where(x => x.Sifre == textBox2.Text).FirstOrDefault();
+            gelenID = kullaniciAdi.ID;
             int hak = 3;
             do
             {
@@ -51,11 +52,12 @@ namespace Diyet_Programi_Querry
                     AnasayfaForm anasayfaForm = new AnasayfaForm();
                     anasayfaForm.Show();
                     this.Close();
+                    
                     break;
                 }
             } while (true);
 
-            gelenID = kullaniciAdi.ID;
+           
         }
 
         private void btnGeri_Click_1(object sender, EventArgs e)

@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess.ConcreteRepository;
+using DataAccess.Context;
+using Entities.Concrete;
 using Microsoft.VisualBasic;
 
 namespace Diyet_Programi_Querry
@@ -17,25 +20,44 @@ namespace Diyet_Programi_Querry
         public AnasayfaForm()
         {
             InitializeComponent();
+            db = new DietQueryDBContext();
+            _kullaniciBilgisiRepository = new KullaniciBilgisiRepository(db);
+            _vucutAnalizRepository = new VucutAnalizRepository(db);
+            _egzersizlerRepository = new EgzersizlerRepository(db);
+            _tuketilenBesinlerRepository = new TuketilenBesinlerRepository(db);
+            _besinlerRepository = new BesinlerRepository(db);
         }
-
+        private DietQueryDBContext db;
+        private KullaniciBilgisiRepository _kullaniciBilgisiRepository;
+        private VucutAnalizRepository _vucutAnalizRepository;
+        private EgzersizlerRepository _egzersizlerRepository;
+        private TuketilenBesinlerRepository _tuketilenBesinlerRepository;
+        private BesinlerRepository _besinlerRepository;
         private void lblHarcananKalori_Click(object sender, EventArgs e)
         {
             //asadajjcjajakkkaas26626
         }
-
+        VucutAnalizi vucutAnalizi;
+        float oran;
         private void Menü_Load(object sender, EventArgs e)
         {
-            long HarcananKalori = 2050;
+            KullaniciBilgisi kullanici = _kullaniciBilgisiRepository.GetById(GirisYap.gelenID);
+            vucutAnalizi = _vucutAnalizRepository.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).FirstOrDefault();
+            var egzersiz = _egzersizlerRepository.GetAll().Where(x => x.KullaniciId == GirisYap.gelenID).ToList();
             pnlMenu.Visible = false;
-            circularProgressBar1.Value = 75;
-            circularProgressBar1.alinanKalori = 1345;
-            lblEgzersizKalori.Text = "500";
-            lblKalori.Text=HarcananKalori.ToString();
-            lblBoy.Text = "178";
-            lblAdSoyad.Text = "Serkan Temiz";
-            lblKilo.Text = "75";
-            lblYas.Text = "27";
+            List<int?> tuketilenBesinlerListe = _tuketilenBesinlerRepository.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).Select(x=>x.BesinBilgileriID).ToList();
+            var besinlerListe = _besinlerRepository.GetAll().Where(x => tuketilenBesinlerListe.Contains(x.ID));
+            var alinanKalori = besinlerListe.Sum(x => x.Kalori);
+            var hedefKalori = vucutAnalizi.HedefKalori;
+            oran = alinanKalori /(float) hedefKalori;
+            circularProgressBar1.Value = (long)(((decimal)alinanKalori/hedefKalori)*100);
+            circularProgressBar1.alinanKalori = (long)alinanKalori;
+            lblEgzersizKalori.Text = egzersiz.Sum(x=>x.HarcananKalori).ToString();
+            lblHedefKalori.Text = hedefKalori.ToString();
+            lblBoy.Text = vucutAnalizi.Boyu.ToString();
+            lblAdSoyad.Text = kullanici.KullaniciAd + " " + kullanici.Soyad;
+            lblKilo.Text = vucutAnalizi.Kilo.ToString();
+            lblYas.Text = (DateTime.Now.Year - vucutAnalizi.DogumTarihi.Year).ToString();
             
         }
 
@@ -68,8 +90,12 @@ namespace Diyet_Programi_Querry
         {
             circularProgressBar1.Value = i;
             i++;
-            if(i==76)
+            if(i>oran)
+            {
                 timer1.Stop();
+                circularProgressBar1.Value=(long)oran;
+            }
+                
         }
 
         private void lblKilo_Click(object sender, EventArgs e)
@@ -79,6 +105,8 @@ namespace Diyet_Programi_Querry
             
             if (int.TryParse(kiloVerisi, out int value))
             {
+                vucutAnalizi.Kilo=Convert.ToDecimal(value);
+                _vucutAnalizRepository.Save();
                 lblKilo.Text = value.ToString();
             }
             else
@@ -88,6 +116,53 @@ namespace Diyet_Programi_Querry
                 lblKilo_Click(sender, e);
             }
                 
+        }
+
+        private void btnOgunGirisi_Click(object sender, EventArgs e)
+        {
+            OgunGirisi ogunGirisi = new OgunGirisi();
+            ogunGirisi.Show();
+            this.Close();
+        }
+
+        private void btnAdimSayisi_Click(object sender, EventArgs e)
+        {
+           AdimSayisi oadimSayisi = new AdimSayisi();
+            oadimSayisi.Show();
+            this.Close();
+        }
+
+        private void btnSu_Click(object sender, EventArgs e)
+        {
+            SuEkle suEkle = new SuEkle();
+            suEkle.Show();
+            this.Close();
+        }
+
+        private void btnKronometre_Click(object sender, EventArgs e)
+        {
+            Kronometre kronometre = new Kronometre();
+            kronometre.Show();
+            this.Close();
+        }
+
+        private void btnEgzersiz_Click(object sender, EventArgs e)
+        {
+            Egzersiz egzersiz = new Egzersiz();
+            egzersiz.Show();
+            this.Close();
+        }
+
+        private void btnRaporlama_Click(object sender, EventArgs e)
+        {
+            Raporlama rp = new Raporlama();
+            rp.Show();
+            this.Close();
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
