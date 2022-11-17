@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Enums
 {
-    public enum Hedef
+    public enum HedefEnum
     {
         Kilo_Vermek=1,
         Kilo_Korumak,

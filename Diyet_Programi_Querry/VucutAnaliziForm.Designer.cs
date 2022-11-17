@@ -1,6 +1,6 @@
 ﻿namespace Diyet_Programi_Querry
 {
-    partial class VucutAnalizi
+    partial class VucutAnaliziForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VucutAnalizi));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VucutAnaliziForm));
             this.lblBMH = new System.Windows.Forms.Label();
             this.lblVKI = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,13 +42,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdbErkek = new System.Windows.Forms.RadioButton();
+            this.rdbKadin = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
+            this.btnGeri = new System.Windows.Forms.Button();
+            this.btnileri = new System.Windows.Forms.Button();
+            this.btnHesapla = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +113,7 @@
             this.label13.Location = new System.Drawing.Point(13, 9);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(228, 39);
+            this.label13.Size = new System.Drawing.Size(219, 38);
             this.label13.TabIndex = 54;
             this.label13.Text = "Vücut Analizi";
             // 
@@ -164,6 +164,7 @@
             this.txtKilo.Name = "txtKilo";
             this.txtKilo.Size = new System.Drawing.Size(185, 26);
             this.txtKilo.TabIndex = 65;
+            this.txtKilo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoy_KeyPress);
             // 
             // txtBoy
             // 
@@ -173,6 +174,7 @@
             this.txtBoy.Name = "txtBoy";
             this.txtBoy.Size = new System.Drawing.Size(185, 26);
             this.txtBoy.TabIndex = 64;
+            this.txtBoy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoy_KeyPress);
             // 
             // label3
             // 
@@ -213,33 +215,33 @@
             this.label1.TabIndex = 61;
             this.label1.Text = "Boy : ";
             // 
-            // radioButton1
+            // rdbErkek
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton1.Location = new System.Drawing.Point(174, 256);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(83, 29);
-            this.radioButton1.TabIndex = 68;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Erkek";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rdbErkek.AutoSize = true;
+            this.rdbErkek.BackColor = System.Drawing.Color.Transparent;
+            this.rdbErkek.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbErkek.Location = new System.Drawing.Point(174, 256);
+            this.rdbErkek.Margin = new System.Windows.Forms.Padding(2);
+            this.rdbErkek.Name = "rdbErkek";
+            this.rdbErkek.Size = new System.Drawing.Size(83, 29);
+            this.rdbErkek.TabIndex = 68;
+            this.rdbErkek.TabStop = true;
+            this.rdbErkek.Text = "Erkek";
+            this.rdbErkek.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // rdbKadin
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton2.Location = new System.Drawing.Point(260, 256);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(84, 29);
-            this.radioButton2.TabIndex = 68;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Kadın";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rdbKadin.AutoSize = true;
+            this.rdbKadin.BackColor = System.Drawing.Color.Transparent;
+            this.rdbKadin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdbKadin.Location = new System.Drawing.Point(260, 256);
+            this.rdbKadin.Margin = new System.Windows.Forms.Padding(2);
+            this.rdbKadin.Name = "rdbKadin";
+            this.rdbKadin.Size = new System.Drawing.Size(84, 29);
+            this.rdbKadin.TabIndex = 68;
+            this.rdbKadin.TabStop = true;
+            this.rdbKadin.Text = "Kadın";
+            this.rdbKadin.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -254,82 +256,85 @@
             this.label4.TabIndex = 63;
             this.label4.Text = "Cinsiyet : ";
             // 
-            // dateTimePicker1
+            // dtpDogumTarihi
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(166, 212);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(185, 24);
-            this.dateTimePicker1.TabIndex = 69;
+            this.dtpDogumTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpDogumTarihi.Location = new System.Drawing.Point(166, 212);
+            this.dtpDogumTarihi.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDogumTarihi.Name = "dtpDogumTarihi";
+            this.dtpDogumTarihi.Size = new System.Drawing.Size(185, 24);
+            this.dtpDogumTarihi.TabIndex = 69;
             // 
-            // button2
+            // btnGeri
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(21, 388);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 63);
-            this.button2.TabIndex = 71;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnGeri.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
+            this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeri.FlatAppearance.BorderSize = 0;
+            this.btnGeri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGeri.Location = new System.Drawing.Point(21, 388);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(93, 63);
+            this.btnGeri.TabIndex = 71;
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
-            // button3
+            // btnileri
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(651, 388);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 62);
-            this.button3.TabIndex = 71;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnileri.BackColor = System.Drawing.Color.Transparent;
+            this.btnileri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnileri.BackgroundImage")));
+            this.btnileri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnileri.FlatAppearance.BorderSize = 0;
+            this.btnileri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnileri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnileri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnileri.ForeColor = System.Drawing.Color.Transparent;
+            this.btnileri.Location = new System.Drawing.Point(651, 388);
+            this.btnileri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnileri.Name = "btnileri";
+            this.btnileri.Size = new System.Drawing.Size(93, 62);
+            this.btnileri.TabIndex = 71;
+            this.btnileri.UseVisualStyleBackColor = false;
+            this.btnileri.Click += new System.EventHandler(this.btnileri_Click);
             // 
-            // rjButton1
+            // btnHesapla
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 20;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(166, 305);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(185, 57);
-            this.rjButton1.TabIndex = 72;
-            this.rjButton1.Text = "HESAPLA";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btnHesapla.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHesapla.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHesapla.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHesapla.BorderRadius = 20;
+            this.btnHesapla.BorderSize = 0;
+            this.btnHesapla.FlatAppearance.BorderSize = 0;
+            this.btnHesapla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHesapla.ForeColor = System.Drawing.Color.White;
+            this.btnHesapla.Location = new System.Drawing.Point(166, 305);
+            this.btnHesapla.Name = "btnHesapla";
+            this.btnHesapla.Size = new System.Drawing.Size(185, 57);
+            this.btnHesapla.TabIndex = 72;
+            this.btnHesapla.Text = "HESAPLA";
+            this.btnHesapla.TextColor = System.Drawing.Color.White;
+            this.btnHesapla.UseVisualStyleBackColor = false;
+            this.btnHesapla.Click += new System.EventHandler(this.btnHesapla_Click);
             // 
-            // VucutAnalizi
+            // VucutAnaliziForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(757, 462);
-            this.Controls.Add(this.rjButton1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.btnHesapla);
+            this.Controls.Add(this.btnileri);
+            this.Controls.Add(this.btnGeri);
+            this.Controls.Add(this.dtpDogumTarihi);
+            this.Controls.Add(this.rdbKadin);
+            this.Controls.Add(this.rdbErkek);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtKilo);
             this.Controls.Add(this.txtBoy);
@@ -346,7 +351,7 @@
             this.Controls.Add(this.label8);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "VucutAnalizi";
+            this.Name = "VucutAnaliziForm";
             this.Text = "VucutAnalizi";
             this.Load += new System.EventHandler(this.VucutAnalizi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -370,12 +375,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdbErkek;
+        private System.Windows.Forms.RadioButton rdbKadin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private CustomControls.RJControls.RJButton rjButton1;
+        private System.Windows.Forms.DateTimePicker dtpDogumTarihi;
+        private System.Windows.Forms.Button btnGeri;
+        private System.Windows.Forms.Button btnileri;
+        private CustomControls.RJControls.RJButton btnHesapla;
     }
 }

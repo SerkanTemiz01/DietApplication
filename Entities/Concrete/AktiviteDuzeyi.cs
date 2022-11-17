@@ -12,7 +12,7 @@ namespace Entities.Concrete
     {
         public int ID { get;set; }
         public AktiviteDuzeyiEnum AktiviteDuzeyi1 { get;set; }
-        public float AktiviteKatsayisi { get;set; }
+        public decimal AktiviteKatsayisi { get;set; }
         public List<KullaniciBilgisi> KullaniciBilgisi { get;set; }
         public DateTime CreatedDate { get;set; }= DateTime.Now;
         public DateTime? ModifiedDate { get;set; }
@@ -25,13 +25,13 @@ namespace Entities.Concrete
         public void AktiviteKatsayisiHesaplama()
         {
             if (AktiviteDuzeyi1 == AktiviteDuzeyiEnum.Genellikle_Hareketsiz)
-                AktiviteKatsayisi = 1.2F;
+                AktiviteKatsayisi = 1.2M;
             else if (AktiviteDuzeyi1 == AktiviteDuzeyiEnum.Az_Hareketli)
-                AktiviteKatsayisi = 1.375F;
+                AktiviteKatsayisi = 1.375M;
             else if (AktiviteDuzeyi1 == AktiviteDuzeyiEnum.Hareketli)
-                AktiviteKatsayisi = 1.55F;
+                AktiviteKatsayisi = 1.55M;
             else if (AktiviteDuzeyi1 == AktiviteDuzeyiEnum.Cok_Hareketli)
-                AktiviteKatsayisi = 1.75F;
+                AktiviteKatsayisi = 1.75M;
         }
     }
 }

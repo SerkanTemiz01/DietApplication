@@ -13,7 +13,7 @@ namespace Entities.Abstract
         int ID { get; set; }
 
         AktiviteDuzeyiEnum AktiviteDuzeyi1 { get; set; }
-        float AktiviteKatsayisi { get; set; }
+        decimal AktiviteKatsayisi { get; set; }
         List<KullaniciBilgisi> KullaniciBilgisi { get; set; }
 
         void AktiviteKatsayisiHesaplama();

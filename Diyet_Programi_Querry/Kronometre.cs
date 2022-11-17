@@ -67,7 +67,7 @@ namespace Diyet_Programi_Querry
             dakika = 0;
             saat = 0;
             timer1.Stop();
-            Menü menü = new Menü();
+            AnasayfaForm menü = new AnasayfaForm();
             menü.Show();
             this.Close();
         }

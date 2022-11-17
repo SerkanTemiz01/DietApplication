@@ -12,9 +12,9 @@ using Microsoft.VisualBasic;
 
 namespace Diyet_Programi_Querry
 {
-    public partial class Menü : Form
+    public partial class AnasayfaForm : Form
     {
-        public Menü()
+        public AnasayfaForm()
         {
             InitializeComponent();
         }

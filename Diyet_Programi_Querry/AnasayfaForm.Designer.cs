@@ -1,6 +1,6 @@
 ﻿namespace Diyet_Programi_Querry
 {
-    partial class Menü
+    partial class AnasayfaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menü));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnasayfaForm));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.btnRaporlama = new CustomControls.RJControls.RJButton();

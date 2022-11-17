@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccess.Context;
+using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,24 +19,51 @@ namespace Diyet_Programi_Querry
             InitializeComponent();
         }
 
-        private void GirisYap_Load(object sender, EventArgs e)
+
+        private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
-            //button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            //button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            
+            DietQueryDBContext db = new DietQueryDBContext();
+            KullaniciBilgisi kullaniciAdi = db.KullaniciBilgisis.Where(x => x.KullaniciAd == textBox1.Text).FirstOrDefault();
+            KullaniciBilgisi kullaniciSifre = db.KullaniciBilgisis.Where(x => x.Sifre == textBox2.Text).FirstOrDefault();
+            int hak = 3;
+            do
+            {
+
+
+
+                if (kullaniciAdi == null || kullaniciSifre == null)
+                {
+                    hak--;
+                    if (hak == 0)
+                    {
+                        MessageBox.Show("Girişiniz Bloke Olmuştur.");
+                        btnGirisYap.Enabled = false;
+                        break;
+                    }
+
+
+
+                    MessageBox.Show($"Giriş Başarısız. Tekrar Giriniz. {hak} Adet Giriş Hakkınız Kalmıştır.");
+                }
+                else
+                {
+                    MessageBox.Show("Giriş Başarılıdır.");
+                    AnasayfaForm anasayfaForm = new AnasayfaForm();
+                    anasayfaForm.Show();
+                    this.Close();
+                    break;
+                }
+            } while (true);
+
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnGeri_Click_1(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.Show();
             this.Close();
         }
-
-
-        private void btnGirisYap_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
+

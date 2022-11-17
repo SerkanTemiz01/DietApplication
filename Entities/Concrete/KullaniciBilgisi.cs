@@ -22,9 +22,9 @@ namespace Entities.Concrete
        // int EgzersizID { get;set; }
         //Egzersizler Egzersizler { get;set; }
         public int? AktiviteDuzeyiID { get;set; }
-        public AktiviteDuzeyi AktiviteDuzeyi { get;set; }
+        public virtual AktiviteDuzeyi AktiviteDuzeyi { get;set; }
         public int? HedefID { get;set; }
-        public KullaniciHedef KullaniciHedef { get;set; }
+        public virtual KullaniciHedef KullaniciHedef { get;set; }
         //public int? VucutAnaliziID { get;set; }
         //public VucutAnalizi VucutAnalizi { get;set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
