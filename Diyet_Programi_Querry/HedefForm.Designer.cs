@@ -1,6 +1,6 @@
 ﻿namespace Diyet_Programi_Querry
 {
-    partial class Hedef
+    partial class HedefForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hedef));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HedefForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.btnKiloVermek = new CustomControls.RJControls.RJButton();
             this.btnKilomuKorumak = new CustomControls.RJControls.RJButton();
             this.btnKiloAlmak = new CustomControls.RJControls.RJButton();
@@ -48,23 +48,24 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "HEDEFİN NEDİR?";
             // 
-            // button4
+            // btnGeri
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(13, 503);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 63);
-            this.button4.TabIndex = 7;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnGeri.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
+            this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeri.FlatAppearance.BorderSize = 0;
+            this.btnGeri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGeri.Location = new System.Drawing.Point(13, 503);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(83, 63);
+            this.btnGeri.TabIndex = 7;
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // btnKiloVermek
             // 
@@ -83,6 +84,7 @@
             this.btnKiloVermek.Text = "KİLO VERMEK";
             this.btnKiloVermek.TextColor = System.Drawing.Color.White;
             this.btnKiloVermek.UseVisualStyleBackColor = false;
+            this.btnKiloVermek.Click += new System.EventHandler(this.btnKiloVermek_Click);
             // 
             // btnKilomuKorumak
             // 
@@ -101,6 +103,7 @@
             this.btnKilomuKorumak.Text = "KİLOMU KORUMAK";
             this.btnKilomuKorumak.TextColor = System.Drawing.Color.White;
             this.btnKilomuKorumak.UseVisualStyleBackColor = false;
+            this.btnKilomuKorumak.Click += new System.EventHandler(this.btnKilomuKorumak_Click);
             // 
             // btnKiloAlmak
             // 
@@ -119,6 +122,7 @@
             this.btnKiloAlmak.Text = "KİLO ALMAK";
             this.btnKiloAlmak.TextColor = System.Drawing.Color.White;
             this.btnKiloAlmak.UseVisualStyleBackColor = false;
+            this.btnKiloAlmak.Click += new System.EventHandler(this.btnKiloAlmak_Click);
             // 
             // Hedef
             // 
@@ -130,12 +134,13 @@
             this.Controls.Add(this.btnKiloAlmak);
             this.Controls.Add(this.btnKilomuKorumak);
             this.Controls.Add(this.btnKiloVermek);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Hedef";
             this.Text = "Hedef";
+            this.Load += new System.EventHandler(this.Hedef_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,7 +149,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnGeri;
         private CustomControls.RJControls.RJButton btnKiloVermek;
         private CustomControls.RJControls.RJButton btnKilomuKorumak;
         private CustomControls.RJControls.RJButton btnKiloAlmak;

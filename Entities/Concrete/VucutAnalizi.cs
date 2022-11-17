@@ -46,7 +46,7 @@ namespace Entities.Concrete
 
         public void VKIBulma()
         {
-            VKI = Kilo /(decimal)(Math.Pow((double)Boyu, 2));
+            VKI = Kilo /(decimal)(Math.Pow((double)Boyu/100, 2));
         }
     }
 }

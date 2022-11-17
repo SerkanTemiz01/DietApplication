@@ -78,11 +78,11 @@
     <Compile Include="AdimSayisi.Designer.cs">
       <DependentUpon>AdimSayisi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aktivite_Duzeyi.cs">
+    <Compile Include="Aktivite_DuzeyiForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aktivite_Duzeyi.Designer.cs">
-      <DependentUpon>Aktivite_Duzeyi.cs</DependentUpon>
+    <Compile Include="Aktivite_DuzeyiForm.Designer.cs">
+      <DependentUpon>Aktivite_DuzeyiForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Button.cs">
       <SubType>Component</SubType>
@@ -108,11 +108,11 @@
     <Compile Include="GirisYap.Designer.cs">
       <DependentUpon>GirisYap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hedef.cs">
+    <Compile Include="HedefForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hedef.Designer.cs">
-      <DependentUpon>Hedef.cs</DependentUpon>
+    <Compile Include="HedefForm.Designer.cs">
+      <DependentUpon>HedefForm.cs</DependentUpon>
     </Compile>
     <Compile Include="KayitOl.cs">
       <SubType>Form</SubType>
@@ -126,11 +126,11 @@
     <Compile Include="Kronometre.Designer.cs">
       <DependentUpon>Kronometre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menü.cs">
+    <Compile Include="AnasayfaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menü.Designer.cs">
-      <DependentUpon>Menü.cs</DependentUpon>
+    <Compile Include="AnasayfaForm.Designer.cs">
+      <DependentUpon>AnasayfaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OgunGirisi.cs">
       <SubType>Form</SubType>
@@ -152,11 +152,11 @@
     <Compile Include="SuEkle.Designer.cs">
       <DependentUpon>SuEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="VucutAnalizi.cs">
+    <Compile Include="VucutAnaliziForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VucutAnalizi.Designer.cs">
-      <DependentUpon>VucutAnalizi.cs</DependentUpon>
+    <Compile Include="VucutAnaliziForm.Designer.cs">
+      <DependentUpon>VucutAnaliziForm.cs</DependentUpon>
     </Compile>
     <Compile Include="YeniOgunEkle.cs">
       <SubType>Form</SubType>
@@ -167,8 +167,8 @@
     <EmbeddedResource Include="AdimSayisi.resx">
       <DependentUpon>AdimSayisi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aktivite_Duzeyi.resx">
-      <DependentUpon>Aktivite_Duzeyi.cs</DependentUpon>
+    <EmbeddedResource Include="Aktivite_DuzeyiForm.resx">
+      <DependentUpon>Aktivite_DuzeyiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Egzersiz.resx">
       <DependentUpon>Egzersiz.cs</DependentUpon>
@@ -179,8 +179,8 @@
     <EmbeddedResource Include="GirisYap.resx">
       <DependentUpon>GirisYap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hedef.resx">
-      <DependentUpon>Hedef.cs</DependentUpon>
+    <EmbeddedResource Include="HedefForm.resx">
+      <DependentUpon>HedefForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KayitOl.resx">
       <DependentUpon>KayitOl.cs</DependentUpon>
@@ -188,8 +188,8 @@
     <EmbeddedResource Include="Kronometre.resx">
       <DependentUpon>Kronometre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menü.resx">
-      <DependentUpon>Menü.cs</DependentUpon>
+    <EmbeddedResource Include="AnasayfaForm.resx">
+      <DependentUpon>AnasayfaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OgunGirisi.resx">
       <DependentUpon>OgunGirisi.cs</DependentUpon>
@@ -209,8 +209,8 @@
     <EmbeddedResource Include="SuEkle.resx">
       <DependentUpon>SuEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VucutAnalizi.resx">
-      <DependentUpon>VucutAnalizi.cs</DependentUpon>
+    <EmbeddedResource Include="VucutAnaliziForm.resx">
+      <DependentUpon>VucutAnaliziForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YeniOgunEkle.resx">
       <DependentUpon>YeniOgunEkle.cs</DependentUpon>

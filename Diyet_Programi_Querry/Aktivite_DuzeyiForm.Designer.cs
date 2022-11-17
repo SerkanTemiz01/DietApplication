@@ -1,6 +1,6 @@
 ﻿namespace Diyet_Programi_Querry
 {
-    partial class Aktivite_Duzeyi
+    partial class Aktivite_DuzeyiForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aktivite_Duzeyi));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aktivite_DuzeyiForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
+            this.btnGenellikleHareketsiz = new CustomControls.RJControls.RJButton();
             this.btnAzHareketli = new CustomControls.RJControls.RJButton();
             this.btnHareketli = new CustomControls.RJControls.RJButton();
             this.btnCokHareketli = new CustomControls.RJControls.RJButton();
@@ -80,23 +80,24 @@
             this.button5.TabIndex = 7;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // rjButton1
+            // btnGenellikleHareketsiz
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 12;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(75, 103);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(344, 65);
-            this.rjButton1.TabIndex = 8;
-            this.rjButton1.Text = "GENELLİKLE HAREKETSİZ";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.btnGenellikleHareketsiz.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGenellikleHareketsiz.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGenellikleHareketsiz.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGenellikleHareketsiz.BorderRadius = 12;
+            this.btnGenellikleHareketsiz.BorderSize = 0;
+            this.btnGenellikleHareketsiz.FlatAppearance.BorderSize = 0;
+            this.btnGenellikleHareketsiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenellikleHareketsiz.ForeColor = System.Drawing.Color.White;
+            this.btnGenellikleHareketsiz.Location = new System.Drawing.Point(75, 103);
+            this.btnGenellikleHareketsiz.Name = "btnGenellikleHareketsiz";
+            this.btnGenellikleHareketsiz.Size = new System.Drawing.Size(344, 65);
+            this.btnGenellikleHareketsiz.TabIndex = 8;
+            this.btnGenellikleHareketsiz.Text = "GENELLİKLE HAREKETSİZ";
+            this.btnGenellikleHareketsiz.TextColor = System.Drawing.Color.White;
+            this.btnGenellikleHareketsiz.UseVisualStyleBackColor = false;
+            this.btnGenellikleHareketsiz.Click += new System.EventHandler(this.btnGenellikleHareketsiz_Click);
             // 
             // btnAzHareketli
             // 
@@ -115,6 +116,7 @@
             this.btnAzHareketli.Text = "AZ HAREKETLİ";
             this.btnAzHareketli.TextColor = System.Drawing.Color.White;
             this.btnAzHareketli.UseVisualStyleBackColor = false;
+            this.btnAzHareketli.Click += new System.EventHandler(this.btnAzHareketli_Click);
             // 
             // btnHareketli
             // 
@@ -133,6 +135,7 @@
             this.btnHareketli.Text = "HAREKETLİ";
             this.btnHareketli.TextColor = System.Drawing.Color.White;
             this.btnHareketli.UseVisualStyleBackColor = false;
+            this.btnHareketli.Click += new System.EventHandler(this.btnHareketli_Click);
             // 
             // btnCokHareketli
             // 
@@ -151,6 +154,7 @@
             this.btnCokHareketli.Text = "ÇOK HAREKETLİ";
             this.btnCokHareketli.TextColor = System.Drawing.Color.White;
             this.btnCokHareketli.UseVisualStyleBackColor = false;
+            this.btnCokHareketli.Click += new System.EventHandler(this.btnCokHareketli_Click);
             // 
             // Aktivite_Duzeyi
             // 
@@ -162,7 +166,7 @@
             this.Controls.Add(this.btnCokHareketli);
             this.Controls.Add(this.btnHareketli);
             this.Controls.Add(this.btnAzHareketli);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.btnGenellikleHareketsiz);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -170,6 +174,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Aktivite_Duzeyi";
             this.Text = "Anasayfa";
+            this.Load += new System.EventHandler(this.Aktivite_Duzeyi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +184,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button5;
-        private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJButton btnGenellikleHareketsiz;
         private CustomControls.RJControls.RJButton btnAzHareketli;
         private CustomControls.RJControls.RJButton btnHareketli;
         private CustomControls.RJControls.RJButton btnCokHareketli;

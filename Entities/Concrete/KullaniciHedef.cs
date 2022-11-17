@@ -11,7 +11,7 @@ namespace Entities.Concrete
     public class KullaniciHedef : IBaseEntity, IKullaniciHedef
     {
         public int ID { get;set; }
-        public Hedef Hedef { get;set; }
+        public HedefEnum Hedef { get;set; }
         public decimal HedefKatsayisi { get;set; }
         public List<KullaniciBilgisi> KullaniciBilgisi { get;set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
@@ -22,11 +22,11 @@ namespace Entities.Concrete
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;
 
-        public void HedefKatSayisiHesapla(Hedef hedef)
+        public void HedefKatSayisiHesapla()
         {
-            if (Hedef.Kilo_Vermek ==hedef)
+            if (HedefEnum.Kilo_Vermek ==Hedef)
                 HedefKatsayisi = -200;
-            else if (Hedef.Kilo_Almak == hedef)
+            else if (HedefEnum.Kilo_Almak == Hedef)
                 HedefKatsayisi = +200;
             else
                 HedefKatsayisi = 0;

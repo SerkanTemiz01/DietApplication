@@ -44,7 +44,7 @@ namespace Diyet_Programi_Querry
                     yeniKullanici = kb;
                     _kullaniciBilgisiRepository.Add(kb);
                     MessageBox.Show("Başarılı bir şekilde kayıt gerçekleşmiştir");
-                    Aktivite_Duzeyi aktvForm = new Aktivite_Duzeyi();
+                    Aktivite_DuzeyiForm aktvForm = new Aktivite_DuzeyiForm();
                     aktvForm.Show();
                     this.Close();
                 }

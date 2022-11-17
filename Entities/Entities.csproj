@@ -64,7 +64,7 @@
     <Compile Include="Enums\AktiviteDuzeyiEnum.cs" />
     <Compile Include="Enums\Cinsiyet.cs" />
     <Compile Include="Enums\Egzersiz.cs" />
-    <Compile Include="Enums\Hedef.cs" />
+    <Compile Include="Enums\HedefEnum.cs" />
     <Compile Include="Enums\Netice.cs" />
     <Compile Include="Enums\Ogun.cs" />
     <Compile Include="Enums\Status.cs" />

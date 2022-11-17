@@ -12,12 +12,12 @@ namespace Entities.Abstract
     {
         int ID { get; set; }
 
-        Hedef Hedef { get; set; }
+        HedefEnum Hedef { get; set; }
 
         decimal HedefKatsayisi { get; set; }
 
         List<KullaniciBilgisi> KullaniciBilgisi { get; set; }
 
-        void HedefKatSayisiHesapla(Hedef hedef);
+        void HedefKatSayisiHesapla();
     }
 }
