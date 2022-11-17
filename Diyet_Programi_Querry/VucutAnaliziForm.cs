@@ -83,8 +83,8 @@ namespace Diyet_Programi_Querry
 
         private void btnileri_Click(object sender, EventArgs e)
         {
-            AnasayfaForm mainMenu = new AnasayfaForm();
-            mainMenu.Show();
+            GirisYap girisYap = new GirisYap();
+            girisYap.Show();
             this.Close();
         }
     }

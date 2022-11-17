@@ -26,6 +26,8 @@ namespace Diyet_Programi_Querry
             _egzersizlerRepository = new EgzersizlerRepository(db);
             _tuketilenBesinlerRepository = new TuketilenBesinlerRepository(db);
             _besinlerRepository = new BesinlerRepository(db);
+            _suTakibiRepository = new SuTakibiRepository(db);
+          
         }
         private DietQueryDBContext db;
         private KullaniciBilgisiRepository _kullaniciBilgisiRepository;
@@ -33,12 +35,13 @@ namespace Diyet_Programi_Querry
         private EgzersizlerRepository _egzersizlerRepository;
         private TuketilenBesinlerRepository _tuketilenBesinlerRepository;
         private BesinlerRepository _besinlerRepository;
+        private SuTakibiRepository _suTakibiRepository;
         private void lblHarcananKalori_Click(object sender, EventArgs e)
         {
             //asadajjcjajakkkaas26626
         }
         VucutAnalizi vucutAnalizi;
-        float oran;
+        long oranKalori;
         private void Menü_Load(object sender, EventArgs e)
         {
             KullaniciBilgisi kullanici = _kullaniciBilgisiRepository.GetById(GirisYap.gelenID);
@@ -49,16 +52,20 @@ namespace Diyet_Programi_Querry
             var besinlerListe = _besinlerRepository.GetAll().Where(x => tuketilenBesinlerListe.Contains(x.ID));
             var alinanKalori = besinlerListe.Sum(x => x.Kalori);
             var hedefKalori = vucutAnalizi.HedefKalori;
-            oran = alinanKalori /(float) hedefKalori;
+            oranKalori = (long)alinanKalori /(long) hedefKalori;
             circularProgressBar1.Value = (long)(((decimal)alinanKalori/hedefKalori)*100);
             circularProgressBar1.alinanKalori = (long)alinanKalori;
             lblEgzersizKalori.Text = egzersiz.Sum(x=>x.HarcananKalori).ToString();
             lblHedefKalori.Text = hedefKalori.ToString();
             lblBoy.Text = vucutAnalizi.Boyu.ToString();
-            lblAdSoyad.Text = kullanici.KullaniciAd + " " + kullanici.Soyad;
+            lblAdSoyad.Text = kullanici.Ad + " " + kullanici.Soyad;
             lblKilo.Text = vucutAnalizi.Kilo.ToString();
+            lblVücutKitleİndeksi.Text = vucutAnalizi.VKI.ToString();
             lblYas.Text = (DateTime.Now.Year - vucutAnalizi.DogumTarihi.Year).ToString();
-            
+            var suListesi = _suTakibiRepository.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).ToList();
+            var icilenSuMiktari = suListesi.Sum(x => x.SuMiktari);
+            circularProgressBar2.Value = (long)(icilenSuMiktari / 2500F);
+            circularProgressBar2.alinanKalori =(long) icilenSuMiktari;
         }
 
         private void label1_MouseEnter(object sender, EventArgs e)
@@ -90,10 +97,10 @@ namespace Diyet_Programi_Querry
         {
             circularProgressBar1.Value = i;
             i++;
-            if(i>oran)
+            if(i>oranKalori)
             {
                 timer1.Stop();
-                circularProgressBar1.Value=(long)oran;
+                circularProgressBar1.Value=oranKalori;
             }
                 
         }

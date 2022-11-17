@@ -20,44 +20,37 @@ namespace Diyet_Programi_Querry
         }
         DietQueryDBContext db;
         public static int gelenID;
+        int hak = 3;
         private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
-             db = new DietQueryDBContext();
+            db = new DietQueryDBContext();
             KullaniciBilgisi kullaniciAdi = db.KullaniciBilgisis.Where(x => x.KullaniciAd == textBox1.Text).FirstOrDefault();
             KullaniciBilgisi kullaniciSifre = db.KullaniciBilgisis.Where(x => x.Sifre == textBox2.Text).FirstOrDefault();
-            gelenID = kullaniciAdi.ID;
-            int hak = 3;
-            do
+
+
+            if (kullaniciAdi == null || kullaniciSifre == null)
             {
-
-
-
-                if (kullaniciAdi == null || kullaniciSifre == null)
+                hak--;
+                if (hak == 0)
                 {
-                    hak--;
-                    if (hak == 0)
-                    {
-                        MessageBox.Show("Girişiniz Bloke Olmuştur.");
-                        btnGirisYap.Enabled = false;
-                        break;
-                    }
+                    MessageBox.Show("Girişiniz Bloke Olmuştur.");
+                    btnGirisYap.Enabled = false;
 
-
-
-                    MessageBox.Show($"Giriş Başarısız. Tekrar Giriniz. {hak} Adet Giriş Hakkınız Kalmıştır.");
                 }
                 else
-                {
-                    MessageBox.Show("Giriş Başarılıdır.");
-                    AnasayfaForm anasayfaForm = new AnasayfaForm();
-                    anasayfaForm.Show();
-                    this.Close();
-                    
-                    break;
-                }
-            } while (true);
+                MessageBox.Show($"Giriş Başarısız. Tekrar Giriniz. {hak} Adet Giriş Hakkınız Kalmıştır.");
+            }
+            else
+            {
+                gelenID = kullaniciAdi.ID;
+                MessageBox.Show("Giriş Başarılıdır.");
+                AnasayfaForm anasayfaForm = new AnasayfaForm();
+                anasayfaForm.Show();
+                this.Close();
 
-           
+
+            }
+
         }
 
         private void btnGeri_Click_1(object sender, EventArgs e)
