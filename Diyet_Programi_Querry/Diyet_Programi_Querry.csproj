@@ -72,11 +72,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdimSayisi.cs">
+    <Compile Include="AdimSayisiForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdimSayisi.Designer.cs">
-      <DependentUpon>AdimSayisi.cs</DependentUpon>
+    <Compile Include="AdimSayisiForm.Designer.cs">
+      <DependentUpon>AdimSayisiForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Aktivite_DuzeyiForm.cs">
       <SubType>Form</SubType>
@@ -164,8 +164,8 @@
     <Compile Include="YeniOgunEkle.Designer.cs">
       <DependentUpon>YeniOgunEkle.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdimSayisi.resx">
-      <DependentUpon>AdimSayisi.cs</DependentUpon>
+    <EmbeddedResource Include="AdimSayisiForm.resx">
+      <DependentUpon>AdimSayisiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aktivite_DuzeyiForm.resx">
       <DependentUpon>Aktivite_DuzeyiForm.cs</DependentUpon>

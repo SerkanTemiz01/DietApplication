@@ -27,6 +27,7 @@ namespace Diyet_Programi_Querry
             _tuketilenBesinlerRepository = new TuketilenBesinlerRepository(db);
             _besinlerRepository = new BesinlerRepository(db);
             _suTakibiRepository = new SuTakibiRepository(db);
+            _adimSayisiReporsitory=new AdimSayisiReporsitory(db);
           
         }
         private DietQueryDBContext db;
@@ -36,6 +37,7 @@ namespace Diyet_Programi_Querry
         private TuketilenBesinlerRepository _tuketilenBesinlerRepository;
         private BesinlerRepository _besinlerRepository;
         private SuTakibiRepository _suTakibiRepository;
+        private AdimSayisiReporsitory _adimSayisiReporsitory;
         private void lblHarcananKalori_Click(object sender, EventArgs e)
         {
             //asadajjcjajakkkaas26626
@@ -59,7 +61,7 @@ namespace Diyet_Programi_Querry
             oranKalori =(long)((decimal)alinanKalori / hedefKalori*100);
             circularProgressBar1.Value = (long)(((decimal)alinanKalori/hedefKalori)*100);
             circularProgressBar1.alinanKalori = (long)alinanKalori;
-            lblEgzersizKalori.Text = egzersiz.Sum(x=>x.HarcananKalori).ToString();
+            lblEgzersizKalori.Text = (egzersiz.Sum(x=>x.HarcananKalori) + _adimSayisiReporsitory.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).Sum(x => x.AdimHarcananKalori)).ToString();
             lblHedefKalori.Text = hedefKalori.ToString();
             lblBoy.Text = vucutAnalizi.Boyu.ToString();
             lblAdSoyad.Text = kullanici.Ad + " " + kullanici.Soyad;
@@ -71,6 +73,8 @@ namespace Diyet_Programi_Querry
             circularProgressBar2.Value = (long)((icilenSuMiktari / icilmesiGerekenSu)*100);
             circularProgressBar2.alinanKalori =(long) icilenSuMiktari;
             lblSu.Text = icilmesiGerekenSu.ToString();
+            lblAdim.Text = _adimSayisiReporsitory.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).Sum(x => x.AdimSayisi1).ToString();
+            
         }
 
         private void label1_MouseEnter(object sender, EventArgs e)
@@ -140,7 +144,7 @@ namespace Diyet_Programi_Querry
 
         private void btnAdimSayisi_Click(object sender, EventArgs e)
         {
-           AdimSayisi oadimSayisi = new AdimSayisi();
+           AdimSayisiForm oadimSayisi = new AdimSayisiForm();
             oadimSayisi.Show();
             this.Close();
         }

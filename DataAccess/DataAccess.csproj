@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractRepository\IBaseRepository.cs" />
+    <Compile Include="ConcreteRepository\AdimSayisiReporsitory.cs" />
     <Compile Include="ConcreteRepository\AktiviteDuzeyiRepository.cs" />
     <Compile Include="ConcreteRepository\BaseRepository.cs" />
     <Compile Include="ConcreteRepository\BesinlerRepository.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="ConcreteRepository\TuketilenBesinlerRepository.cs" />
     <Compile Include="ConcreteRepository\VucutAnalizRepository.cs" />
     <Compile Include="Context\DietQueryDBContext.cs" />
+    <Compile Include="Mapping\AdimSayisiMapping.cs" />
     <Compile Include="Mapping\AktiviteDuzeyiMapping.cs" />
     <Compile Include="Mapping\BesinlerMapping.cs" />
     <Compile Include="Mapping\EgzersizlerMapping.cs" />
