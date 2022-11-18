@@ -23,7 +23,6 @@ namespace Diyet_Programi_Querry
         private DietQueryDBContext db;
         private RaporRepository _raporRepository;
         private TuketilenBesinlerRepository _tuketilenBesinlerRepository;
-        private BesinlerRepository _besinlerRepository;
         private EgzersizlerRepository _egzersizlerRepository;
         private VucutAnalizRepository _vucutAnalizRepository;
         private AdimSayisiReporsitory _adimSayisiReporsitory;
@@ -41,7 +40,6 @@ namespace Diyet_Programi_Querry
         {
             db = new DietQueryDBContext();
             _raporRepository = new RaporRepository(db);
-            _besinlerRepository = new BesinlerRepository(db);
             _tuketilenBesinlerRepository = new TuketilenBesinlerRepository(db);
             _egzersizlerRepository = new EgzersizlerRepository(db);
             _vucutAnalizRepository = new VucutAnalizRepository(db);

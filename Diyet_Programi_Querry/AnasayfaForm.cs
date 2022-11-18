@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Deployment.Internal;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,8 @@ namespace Diyet_Programi_Querry
             _besinlerRepository = new BesinlerRepository(db);
             _suTakibiRepository = new SuTakibiRepository(db);
             _adimSayisiReporsitory=new AdimSayisiReporsitory(db);
-          
+            _kullaniciHedefRepository=new KullaniciHedefRepository(db);
+            _aktiviteDuzeyiRepository = new AktiviteDuzeyiRepository(db);
         }
         private DietQueryDBContext db;
         private KullaniciBilgisiRepository _kullaniciBilgisiRepository;
@@ -38,6 +40,8 @@ namespace Diyet_Programi_Querry
         private BesinlerRepository _besinlerRepository;
         private SuTakibiRepository _suTakibiRepository;
         private AdimSayisiReporsitory _adimSayisiReporsitory;
+        private KullaniciHedefRepository _kullaniciHedefRepository;
+        private AktiviteDuzeyiRepository _aktiviteDuzeyiRepository;
         private void lblHarcananKalori_Click(object sender, EventArgs e)
         {
             //asadajjcjajakkkaas26626
@@ -46,9 +50,12 @@ namespace Diyet_Programi_Querry
         long oranKalori;
         long alinanKalori;
         float icilenSuMiktari;
+        decimal hedefKalori;
+        KullaniciBilgisi kullanici;
+        float icilmesiGerekenSu;
         private void Menü_Load(object sender, EventArgs e)
         {
-            KullaniciBilgisi kullanici = _kullaniciBilgisiRepository.GetById(GirisYap.gelenID);
+            kullanici = _kullaniciBilgisiRepository.GetById(GirisYap.gelenID);
             vucutAnalizi = _vucutAnalizRepository.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).FirstOrDefault();
             var egzersiz = _egzersizlerRepository.GetAll().Where(x => x.KullaniciId == GirisYap.gelenID).ToList();
             pnlMenu.Visible = false;
@@ -56,8 +63,8 @@ namespace Diyet_Programi_Querry
             //var besinlerListe = _besinlerRepository.GetAll().Where(x => tuketilenBesinlerListe.Contains(x.ID));
             var tuketilenBesinler = _tuketilenBesinlerRepository.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).ToList();
             alinanKalori = (long)tuketilenBesinler.Sum(x => x.AlinanKalori);
-            var hedefKalori = vucutAnalizi.HedefKalori;
-            float icilmesiGerekenSu = (float)(vucutAnalizi.Kilo / 25M * 1000);
+            hedefKalori = vucutAnalizi.HedefKalori;
+            icilmesiGerekenSu = (float)(vucutAnalizi.Kilo / 25M * 1000);
             oranKalori =(long)((decimal)alinanKalori / hedefKalori*100);
             circularProgressBar1.Value = (long)(((decimal)alinanKalori/hedefKalori)*100);
             circularProgressBar1.alinanKalori = (long)alinanKalori;
@@ -119,12 +126,22 @@ namespace Diyet_Programi_Querry
         {
             string ilkDegerKilo = lblKilo.Text;
             string kiloVerisi= Interaction.InputBox("Kilo giriniz.", "Yeni Kilo Girişi", lblKilo.Text, this.Width/2, this.Height/2);
-            
+
             if (int.TryParse(kiloVerisi, out int value))
             {
                 vucutAnalizi.Kilo=Convert.ToDecimal(value);
+                vucutAnalizi.BMHBulma();
+                vucutAnalizi.HedefKaloriHesaplama(kullanici.AktiviteDuzeyi.AktiviteKatsayisi,kullanici.KullaniciHedef.HedefKatsayisi);
+                vucutAnalizi.VKIBulma();
                 _vucutAnalizRepository.Save();
                 lblKilo.Text = value.ToString();
+                oranKalori = (long)(((decimal)alinanKalori / vucutAnalizi.HedefKalori) * 100);
+                lblVücutKitleİndeksi.Text = Math.Round(vucutAnalizi.VKI, 2).ToString();
+                lblHedefKalori.Text = Math.Round(vucutAnalizi.HedefKalori,2).ToString();
+                circularProgressBar1.Value = oranKalori;
+                icilmesiGerekenSu = (float)(vucutAnalizi.Kilo / 25M * 1000);
+                lblSu.Text = icilmesiGerekenSu.ToString();
+                circularProgressBar2.Value= (long)((icilenSuMiktari / icilmesiGerekenSu) * 100);
             }
             else
             {
@@ -195,7 +212,7 @@ namespace Diyet_Programi_Querry
 
             circularProgressBar2.Value = j;
             j++;
-            if (j > ((icilenSuMiktari / 2500F) * 100))
+            if (j > ((icilenSuMiktari / icilmesiGerekenSu) * 100))
             {
                 timer2.Stop();
                 
