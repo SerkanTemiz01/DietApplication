@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YeniOgunEkle));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtBesinAdi = new System.Windows.Forms.TextBox();
+            this.txtKalori = new System.Windows.Forms.TextBox();
+            this.cmbOgunAdi = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,37 +42,38 @@
             this.nmrKarbonhidrat = new System.Windows.Forms.NumericUpDown();
             this.nmrProtein = new System.Windows.Forms.NumericUpDown();
             this.nmrYag = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.btnEkle = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.nmrKarbonhidrat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrProtein)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrYag)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtBesinAdi
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 94);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtBesinAdi.Location = new System.Drawing.Point(207, 94);
+            this.txtBesinAdi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtBesinAdi.Name = "txtBesinAdi";
+            this.txtBesinAdi.Size = new System.Drawing.Size(175, 26);
+            this.txtBesinAdi.TabIndex = 0;
             // 
-            // textBox2
+            // txtKalori
             // 
-            this.textBox2.Location = new System.Drawing.Point(207, 209);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 26);
-            this.textBox2.TabIndex = 0;
+            this.txtKalori.Location = new System.Drawing.Point(207, 209);
+            this.txtKalori.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtKalori.Name = "txtKalori";
+            this.txtKalori.Size = new System.Drawing.Size(175, 26);
+            this.txtKalori.TabIndex = 0;
+            this.txtKalori.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKalori_KeyPress_1);
             // 
-            // comboBox1
+            // cmbOgunAdi
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(207, 63);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(175, 27);
-            this.comboBox1.TabIndex = 1;
+            this.cmbOgunAdi.FormattingEnabled = true;
+            this.cmbOgunAdi.Location = new System.Drawing.Point(207, 63);
+            this.cmbOgunAdi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbOgunAdi.Name = "cmbOgunAdi";
+            this.cmbOgunAdi.Size = new System.Drawing.Size(175, 27);
+            this.cmbOgunAdi.TabIndex = 1;
             // 
             // label1
             // 
@@ -173,23 +174,24 @@
             this.nmrYag.Size = new System.Drawing.Size(175, 26);
             this.nmrYag.TabIndex = 4;
             // 
-            // button1
+            // btnGeri
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(1, 289);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 67);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGeri.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
+            this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeri.FlatAppearance.BorderSize = 0;
+            this.btnGeri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGeri.Location = new System.Drawing.Point(1, 289);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(81, 67);
+            this.btnGeri.TabIndex = 7;
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // btnEkle
             // 
@@ -208,6 +210,7 @@
             this.btnEkle.Text = "Ekle";
             this.btnEkle.TextColor = System.Drawing.Color.White;
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
             // 
             // YeniOgunEkle
             // 
@@ -217,7 +220,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(437, 370);
             this.Controls.Add(this.btnEkle);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.nmrYag);
             this.Controls.Add(this.nmrProtein);
             this.Controls.Add(this.nmrKarbonhidrat);
@@ -228,13 +231,14 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cmbOgunAdi);
+            this.Controls.Add(this.txtKalori);
+            this.Controls.Add(this.txtBesinAdi);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "YeniOgunEkle";
             this.Text = "YeniOgunEkle";
+            this.Load += new System.EventHandler(this.YeniOgunEkle_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.nmrKarbonhidrat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrProtein)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrYag)).EndInit();
@@ -245,9 +249,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtBesinAdi;
+        private System.Windows.Forms.TextBox txtKalori;
+        private System.Windows.Forms.ComboBox cmbOgunAdi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -258,7 +262,7 @@
         private System.Windows.Forms.NumericUpDown nmrKarbonhidrat;
         private System.Windows.Forms.NumericUpDown nmrProtein;
         private System.Windows.Forms.NumericUpDown nmrYag;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGeri;
         private CustomControls.RJControls.RJButton btnEkle;
     }
 }

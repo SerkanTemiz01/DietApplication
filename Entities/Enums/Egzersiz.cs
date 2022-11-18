@@ -26,6 +26,7 @@ namespace Entities.Enums
         Jimnastik,
         Zumba,
         Hentbol,
-        Airsoft
+        Airsoft,
+        AdimSayisi
     }
 }

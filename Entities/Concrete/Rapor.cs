@@ -19,7 +19,7 @@ namespace Entities.Concrete
         public decimal NetKalori { get;set; }
         public decimal HarcananKalori { get;set; }
         public Netice Netice { get;set; }
-        public DateTime VerilisTarihi { get;set; }
+        public DateTime VerilisTarihi { get;set; }=DateTime.Now;
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

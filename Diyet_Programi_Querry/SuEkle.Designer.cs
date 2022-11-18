@@ -31,14 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuEkle));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.nmrSu = new System.Windows.Forms.NumericUpDown();
             this.btngeri = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.lnlTplamSu = new System.Windows.Forms.Label();
             this.btnÇıkart = new CustomControls.RJControls.RJButton();
             this.btnEkle = new CustomControls.RJControls.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrSu)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,14 +61,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Bir Bardak Su 200 ml. Eşittir.";
             // 
-            // nmrSu
-            // 
-            this.nmrSu.Location = new System.Drawing.Point(211, 53);
-            this.nmrSu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.nmrSu.Name = "nmrSu";
-            this.nmrSu.Size = new System.Drawing.Size(150, 26);
-            this.nmrSu.TabIndex = 1;
-            // 
             // btngeri
             // 
             this.btngeri.BackColor = System.Drawing.Color.Transparent;
@@ -88,6 +78,7 @@
             this.btngeri.Size = new System.Drawing.Size(102, 77);
             this.btngeri.TabIndex = 7;
             this.btngeri.UseVisualStyleBackColor = false;
+            this.btngeri.Click += new System.EventHandler(this.btngeri_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -168,7 +159,6 @@
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btngeri);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.nmrSu);
             this.Controls.Add(this.lnlTplamSu);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -177,7 +167,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "SuEkle";
             this.Text = "SuEkle";
-            ((System.ComponentModel.ISupportInitialize)(this.nmrSu)).EndInit();
+            this.Load += new System.EventHandler(this.SuEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,7 +177,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown nmrSu;
         private System.Windows.Forms.Button btngeri;
         private CustomControls.RJControls.RJButton btnEkle;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

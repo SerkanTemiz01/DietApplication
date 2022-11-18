@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgunGirisi));
             this.cmbOgunSec = new System.Windows.Forms.ComboBox();
             this.dgwliste = new System.Windows.Forms.DataGridView();
-            this.dgwYenilen = new System.Windows.Forms.DataGridView();
+            this.dgwTuketilenListesi = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nmrGram = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.btnEkle = new CustomControls.RJControls.RJButton();
             this.btnYeniÖgun = new CustomControls.RJControls.RJButton();
             this.btnSil = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgwliste)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwYenilen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwTuketilenListesi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrGram)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,17 +63,19 @@
             this.dgwliste.RowHeadersWidth = 51;
             this.dgwliste.Size = new System.Drawing.Size(391, 205);
             this.dgwliste.TabIndex = 1;
+            this.dgwliste.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwliste_CellMouseClick_1);
             // 
-            // dgwYenilen
+            // dgwTuketilenListesi
             // 
-            this.dgwYenilen.BackgroundColor = System.Drawing.Color.MintCream;
-            this.dgwYenilen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwYenilen.Location = new System.Drawing.Point(447, 96);
-            this.dgwYenilen.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dgwYenilen.Name = "dgwYenilen";
-            this.dgwYenilen.RowHeadersWidth = 51;
-            this.dgwYenilen.Size = new System.Drawing.Size(400, 205);
-            this.dgwYenilen.TabIndex = 1;
+            this.dgwTuketilenListesi.BackgroundColor = System.Drawing.Color.MintCream;
+            this.dgwTuketilenListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwTuketilenListesi.Location = new System.Drawing.Point(447, 96);
+            this.dgwTuketilenListesi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgwTuketilenListesi.Name = "dgwTuketilenListesi";
+            this.dgwTuketilenListesi.RowHeadersWidth = 51;
+            this.dgwTuketilenListesi.Size = new System.Drawing.Size(400, 205);
+            this.dgwTuketilenListesi.TabIndex = 1;
+            this.dgwTuketilenListesi.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwTuketilenListesi_CellMouseClick_1);
             // 
             // label1
             // 
@@ -105,23 +107,24 @@
             this.nmrGram.Size = new System.Drawing.Size(115, 26);
             this.nmrGram.TabIndex = 5;
             // 
-            // button1
+            // btnGeri
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(745, 342);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 77);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGeri.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
+            this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeri.FlatAppearance.BorderSize = 0;
+            this.btnGeri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGeri.Location = new System.Drawing.Point(745, 342);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(102, 77);
+            this.btnGeri.TabIndex = 6;
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // btnEkle
             // 
@@ -140,6 +143,7 @@
             this.btnEkle.Text = "Öğün Ekle";
             this.btnEkle.TextColor = System.Drawing.Color.White;
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
             // 
             // btnYeniÖgun
             // 
@@ -158,6 +162,7 @@
             this.btnYeniÖgun.Text = "Listeye Yeni Öğün Ekle";
             this.btnYeniÖgun.TextColor = System.Drawing.Color.White;
             this.btnYeniÖgun.UseVisualStyleBackColor = false;
+            this.btnYeniÖgun.Click += new System.EventHandler(this.btnYeniÖgun_Click_1);
             // 
             // btnSil
             // 
@@ -176,6 +181,7 @@
             this.btnSil.Text = "Öğün Çıkar";
             this.btnSil.TextColor = System.Drawing.Color.White;
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
             // 
             // OgunGirisi
             // 
@@ -187,11 +193,11 @@
             this.Controls.Add(this.btnYeniÖgun);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.nmrGram);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgwYenilen);
+            this.Controls.Add(this.dgwTuketilenListesi);
             this.Controls.Add(this.dgwliste);
             this.Controls.Add(this.cmbOgunSec);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -200,7 +206,7 @@
             this.Text = "OgunGirisi";
             this.Load += new System.EventHandler(this.OgunGirisi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwliste)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwYenilen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwTuketilenListesi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrGram)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,11 +216,11 @@
         #endregion
         private System.Windows.Forms.ComboBox cmbOgunSec;
         private System.Windows.Forms.DataGridView dgwliste;
-        private System.Windows.Forms.DataGridView dgwYenilen;
+        private System.Windows.Forms.DataGridView dgwTuketilenListesi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nmrGram;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGeri;
         private CustomControls.RJControls.RJButton btnEkle;
         private CustomControls.RJControls.RJButton btnYeniÖgun;
         private CustomControls.RJControls.RJButton btnSil;

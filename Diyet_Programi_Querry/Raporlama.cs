@@ -26,7 +26,7 @@ namespace Diyet_Programi_Querry
         private EgzersizlerRepository _egzersizlerRepository;
         private VucutAnalizRepository _vucutAnalizRepository;
         IEnumerable<Besinler> besinlerListe;
-        float alinanKalori;
+        decimal alinanKalori;
         decimal harcananKalori;
         decimal hedefKalori;
         List<TuketilenBesinler> tuketilenBesinlerListe;
@@ -41,15 +41,17 @@ namespace Diyet_Programi_Querry
              tuketilenBesinlerListe = _tuketilenBesinlerRepository.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).ToList();
             var tuketilenBesinlerID = tuketilenBesinlerListe.Select(x => x.BesinBilgileriID).ToList();
              besinlerListe = _besinlerRepository.GetAll().Where(x => tuketilenBesinlerID.Contains(x.ID));
-             alinanKalori = besinlerListe.Sum(x => x.Kalori);
+             alinanKalori = tuketilenBesinlerListe.Sum(x => x.AlinanKalori);
              harcananKalori = _egzersizlerRepository.GetAll().Where(x => x.KullaniciId == GirisYap.gelenID).Sum(x => x.HarcananKalori);
              hedefKalori = _vucutAnalizRepository.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).Select(x => x.HedefKalori).FirstOrDefault();
             lblAlinanKalori.Text =alinanKalori.ToString();
-            lblProtein.Text = besinlerListe.Sum(x => x.Protein).ToString();
-            lblKarbonhidrat.Text = besinlerListe.Sum(x => x.Karbonhidrat).ToString();
-            lblYag.Text = besinlerListe.Sum(x => x.Yag).ToString();
+            lblProtein.Text = tuketilenBesinlerListe.Sum(x => x.Protein).ToString();
+            lblKarbonhidrat.Text = tuketilenBesinlerListe.Sum(x => x.Karbonhidrat).ToString();
+            lblYag.Text = tuketilenBesinlerListe.Sum(x => x.Yag).ToString();
             lblHarcananKalori.Text = harcananKalori.ToString();
-            lblNetKalori.Text=(hedefKalori-(decimal)alinanKalori+harcananKalori).ToString();
+            lblNetKalori.Text=(hedefKalori-alinanKalori+harcananKalori).ToString();
+
+      
 
         }
 
@@ -59,10 +61,11 @@ namespace Diyet_Programi_Querry
             Rapor rapor = new Rapor();
             rapor.KullaniciID = GirisYap.gelenID;
             rapor.HarcananKalori=harcananKalori;
-            rapor.ProteinDegeri =(decimal) besinlerListe.Sum(x => x.Protein);
-            rapor.YagDegeri= (decimal)besinlerListe.Sum(x => x.Yag);
+            rapor.ProteinDegeri =(decimal) tuketilenBesinlerListe.Sum(x => x.Protein);
+            rapor.YagDegeri= (decimal)tuketilenBesinlerListe.Sum(x => x.Yag);
             rapor.AlinanKaloriDegeri = (decimal)alinanKalori;
             rapor.HedefKaloriDegeri = hedefKalori;
+            rapor.KarbonhidratDegeri = tuketilenBesinlerListe.Sum(x => x.Karbonhidrat);
             rapor.NetKaloriHesaplama();
             rapor.NeticeBulma();
             _raporRepository.Add(rapor);

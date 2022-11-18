@@ -65,6 +65,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblAdim = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.grpKalori.SuspendLayout();
             this.grpSu.SuspendLayout();
@@ -314,7 +315,7 @@
             // 
             this.lblHedefKalori.AutoSize = true;
             this.lblHedefKalori.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHedefKalori.Location = new System.Drawing.Point(347, 53);
+            this.lblHedefKalori.Location = new System.Drawing.Point(319, 57);
             this.lblHedefKalori.Name = "lblHedefKalori";
             this.lblHedefKalori.Size = new System.Drawing.Size(45, 34);
             this.lblHedefKalori.TabIndex = 5;
@@ -375,6 +376,7 @@
             this.circularProgressBar2.Text = " 0\n %57";
             this.circularProgressBar2.TextMode = CircularProgressBar._TextMode.Percentage;
             this.circularProgressBar2.Value = ((long)(57));
+            this.circularProgressBar2.Click += new System.EventHandler(this.circularProgressBar2_Click);
             // 
             // label5
             // 
@@ -544,6 +546,10 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // AnasayfaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -621,5 +627,6 @@
         private System.Windows.Forms.Timer timer1;
         private CustomControls.RJControls.RJButton rjButton1;
         private CircularProgressBar circularProgressBar2;
+        private System.Windows.Forms.Timer timer2;
     }
 }

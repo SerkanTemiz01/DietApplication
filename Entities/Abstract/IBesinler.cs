@@ -11,12 +11,12 @@ namespace Entities.Abstract
     {
         int ID { get; set; }
         string BesinAdi { get; set; }
-        float GramKarsiligi { get; set; }
-
-        float Kalori { get; set; }
-        float Karbonhidrat { get; set; }
-        float Protein { get; set; }
-        float Yag { get; set; }
+        decimal GramKarsiligi { get; set; }
+      
+        decimal Kalori { get; set; }
+        decimal Karbonhidrat { get; set; }
+        decimal Protein { get; set; }
+        decimal Yag { get; set; }
  
         List<TuketilenBesinler> TuketilenBesinler { get; set; }
     }
