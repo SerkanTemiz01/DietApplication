@@ -36,7 +36,7 @@ namespace Diyet_Programi_Querry
             _tuketilenBesinlerRepository = new TuketilenBesinlerRepository(db);
 
             cmbOgunSec.DataSource = Enum.GetValues(typeof(Ogun));
-            dgwliste.DataSource = db.Besinlers.ToList();
+            dgwliste.DataSource = _besinlerRepository.GetAll();
             nmrGram.Maximum = 1000;
             btnEkle.Enabled = false;
             btnSil.Enabled = false;
@@ -110,5 +110,7 @@ namespace Diyet_Programi_Querry
             anasayfaForm.Show();
             this.Close();
         }
+
+       
     }
 }

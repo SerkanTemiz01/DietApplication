@@ -64,6 +64,14 @@ namespace Diyet_Programi_Querry
             hedef.Show();
             this.Close();
         }
-       
+
+        public static bool kullaniciBilgileriDegistirme;
+        private void btnGeri_Click_1(object sender, EventArgs e)
+        {
+            kullaniciBilgileriDegistirme = true;
+            KayitOl kayitOl = new KayitOl();
+            kayitOl.Show();
+            this.Close();
+        }
     }
 }

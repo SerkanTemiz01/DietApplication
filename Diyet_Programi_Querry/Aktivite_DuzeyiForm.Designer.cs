@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Aktivite_DuzeyiForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.btnGenellikleHareketsiz = new CustomControls.RJControls.RJButton();
             this.btnAzHareketli = new CustomControls.RJControls.RJButton();
             this.btnHareketli = new CustomControls.RJControls.RJButton();
@@ -62,23 +62,24 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Haftalık Egzersiz Durumunuzu seçiniz";
             // 
-            // button5
+            // btnGeri
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(13, 482);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 77);
-            this.button5.TabIndex = 7;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnGeri.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
+            this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeri.FlatAppearance.BorderSize = 0;
+            this.btnGeri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGeri.Location = new System.Drawing.Point(13, 482);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(102, 77);
+            this.btnGeri.TabIndex = 7;
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click_1);
             // 
             // btnGenellikleHareketsiz
             // 
@@ -156,7 +157,7 @@
             this.btnCokHareketli.UseVisualStyleBackColor = false;
             this.btnCokHareketli.Click += new System.EventHandler(this.btnCokHareketli_Click);
             // 
-            // Aktivite_Duzeyi
+            // Aktivite_DuzeyiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -167,12 +168,12 @@
             this.Controls.Add(this.btnHareketli);
             this.Controls.Add(this.btnAzHareketli);
             this.Controls.Add(this.btnGenellikleHareketsiz);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Aktivite_Duzeyi";
+            this.Name = "Aktivite_DuzeyiForm";
             this.Text = "Anasayfa";
             this.Load += new System.EventHandler(this.Aktivite_Duzeyi_Load);
             this.ResumeLayout(false);
@@ -183,7 +184,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnGeri;
         private CustomControls.RJControls.RJButton btnGenellikleHareketsiz;
         private CustomControls.RJControls.RJButton btnAzHareketli;
         private CustomControls.RJControls.RJButton btnHareketli;
