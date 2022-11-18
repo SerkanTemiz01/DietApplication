@@ -14,7 +14,7 @@ namespace Entities.Concrete
         public int BardakAdeti { get;set; }
         public float SuMiktari { get;set; }
 
-        public DateTime TuketilenTarih { get;set; }
+        public DateTime TuketilenTarih { get;set; }=DateTime.Now;
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

@@ -79,6 +79,7 @@
             this.btnGeri.Size = new System.Drawing.Size(87, 60);
             this.btnGeri.TabIndex = 74;
             this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // label2
             // 
@@ -133,7 +134,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(110, 229);
+            this.label6.Location = new System.Drawing.Point(110, 199);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(156, 23);
@@ -145,7 +146,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(96, 199);
+            this.label7.Location = new System.Drawing.Point(92, 238);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(174, 23);
@@ -205,7 +206,7 @@
             this.lblNetKalori.AutoSize = true;
             this.lblNetKalori.BackColor = System.Drawing.Color.Transparent;
             this.lblNetKalori.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblNetKalori.Location = new System.Drawing.Point(274, 199);
+            this.lblNetKalori.Location = new System.Drawing.Point(274, 238);
             this.lblNetKalori.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNetKalori.Name = "lblNetKalori";
             this.lblNetKalori.Size = new System.Drawing.Size(30, 23);
@@ -217,7 +218,7 @@
             this.lblHarcananKalori.AutoSize = true;
             this.lblHarcananKalori.BackColor = System.Drawing.Color.Transparent;
             this.lblHarcananKalori.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblHarcananKalori.Location = new System.Drawing.Point(274, 229);
+            this.lblHarcananKalori.Location = new System.Drawing.Point(274, 199);
             this.lblHarcananKalori.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHarcananKalori.Name = "lblHarcananKalori";
             this.lblHarcananKalori.Size = new System.Drawing.Size(30, 23);
@@ -262,6 +263,7 @@
             this.btnRaporAl.Text = "Rapor Al";
             this.btnRaporAl.TextColor = System.Drawing.Color.White;
             this.btnRaporAl.UseVisualStyleBackColor = false;
+            this.btnRaporAl.Click += new System.EventHandler(this.btnRaporAl_Click);
             // 
             // Raporlama
             // 
@@ -292,6 +294,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Raporlama";
             this.Text = "Raporlama";
+            this.Load += new System.EventHandler(this.Raporlama_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

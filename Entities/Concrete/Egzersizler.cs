@@ -85,7 +85,9 @@ namespace Entities.Concrete
                 case Egzersiz.Airsoft:
                     HarcananKalori += 5 * Sure;
                     break;
-
+                case Egzersiz.AdimSayisi:
+                    HarcananKalori += 4 * Sure;
+                        break;
             }
             
         }

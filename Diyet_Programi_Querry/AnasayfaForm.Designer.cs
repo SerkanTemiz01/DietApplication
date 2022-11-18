@@ -44,10 +44,11 @@
             this.circularProgressBar1 = new CircularProgressBar();
             this.label12 = new System.Windows.Forms.Label();
             this.lblEgzersizKalori = new System.Windows.Forms.Label();
-            this.lblKalori = new System.Windows.Forms.Label();
+            this.lblHedefKalori = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.grpSu = new System.Windows.Forms.GroupBox();
+            this.circularProgressBar2 = new CircularProgressBar();
             this.label5 = new System.Windows.Forms.Label();
             this.lblSu = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblAdim = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.circularProgressBar2 = new CircularProgressBar();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.grpKalori.SuspendLayout();
             this.grpSu.SuspendLayout();
@@ -110,6 +111,7 @@
             this.rjButton1.TabIndex = 10;
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // btnRaporlama
             // 
@@ -128,6 +130,7 @@
             this.btnRaporlama.Text = "Raporlama";
             this.btnRaporlama.TextColor = System.Drawing.Color.White;
             this.btnRaporlama.UseVisualStyleBackColor = false;
+            this.btnRaporlama.Click += new System.EventHandler(this.btnRaporlama_Click);
             // 
             // btnEgzersiz
             // 
@@ -146,6 +149,7 @@
             this.btnEgzersiz.Text = "Egzersizler";
             this.btnEgzersiz.TextColor = System.Drawing.Color.White;
             this.btnEgzersiz.UseVisualStyleBackColor = false;
+            this.btnEgzersiz.Click += new System.EventHandler(this.btnEgzersiz_Click);
             // 
             // btnKronometre
             // 
@@ -164,6 +168,7 @@
             this.btnKronometre.Text = "Kronometre";
             this.btnKronometre.TextColor = System.Drawing.Color.White;
             this.btnKronometre.UseVisualStyleBackColor = false;
+            this.btnKronometre.Click += new System.EventHandler(this.btnKronometre_Click);
             // 
             // btnSu
             // 
@@ -182,6 +187,7 @@
             this.btnSu.Text = "Su Takibi";
             this.btnSu.TextColor = System.Drawing.Color.White;
             this.btnSu.UseVisualStyleBackColor = false;
+            this.btnSu.Click += new System.EventHandler(this.btnSu_Click);
             // 
             // btnAdimSayisi
             // 
@@ -200,6 +206,7 @@
             this.btnAdimSayisi.Text = "Adım Sayısı";
             this.btnAdimSayisi.TextColor = System.Drawing.Color.White;
             this.btnAdimSayisi.UseVisualStyleBackColor = false;
+            this.btnAdimSayisi.Click += new System.EventHandler(this.btnAdimSayisi_Click);
             // 
             // btnOgunGirisi
             // 
@@ -218,6 +225,7 @@
             this.btnOgunGirisi.Text = "Öğün Girişi";
             this.btnOgunGirisi.TextColor = System.Drawing.Color.White;
             this.btnOgunGirisi.UseVisualStyleBackColor = false;
+            this.btnOgunGirisi.Click += new System.EventHandler(this.btnOgunGirisi_Click);
             // 
             // label11
             // 
@@ -250,7 +258,7 @@
             this.grpKalori.Controls.Add(this.circularProgressBar1);
             this.grpKalori.Controls.Add(this.label12);
             this.grpKalori.Controls.Add(this.lblEgzersizKalori);
-            this.grpKalori.Controls.Add(this.lblKalori);
+            this.grpKalori.Controls.Add(this.lblHedefKalori);
             this.grpKalori.Controls.Add(this.label10);
             this.grpKalori.Controls.Add(this.label2);
             this.grpKalori.Location = new System.Drawing.Point(218, 80);
@@ -303,16 +311,16 @@
             this.lblEgzersizKalori.TabIndex = 5;
             this.lblEgzersizKalori.Text = "00";
             // 
-            // lblKalori
+            // lblHedefKalori
             // 
-            this.lblKalori.AutoSize = true;
-            this.lblKalori.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKalori.Location = new System.Drawing.Point(347, 53);
-            this.lblKalori.Name = "lblKalori";
-            this.lblKalori.Size = new System.Drawing.Size(45, 34);
-            this.lblKalori.TabIndex = 5;
-            this.lblKalori.Text = "00";
-            this.lblKalori.Click += new System.EventHandler(this.lblKilo_Click);
+            this.lblHedefKalori.AutoSize = true;
+            this.lblHedefKalori.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHedefKalori.Location = new System.Drawing.Point(319, 57);
+            this.lblHedefKalori.Name = "lblHedefKalori";
+            this.lblHedefKalori.Size = new System.Drawing.Size(45, 34);
+            this.lblHedefKalori.TabIndex = 5;
+            this.lblHedefKalori.Text = "00";
+            this.lblHedefKalori.Click += new System.EventHandler(this.lblKilo_Click);
             // 
             // label10
             // 
@@ -346,6 +354,29 @@
             this.grpSu.TabIndex = 4;
             this.grpSu.TabStop = false;
             this.grpSu.Text = "Günlük Alınan Su Miktarı:";
+            // 
+            // circularProgressBar2
+            // 
+            this.circularProgressBar2.BackColor = System.Drawing.Color.Silver;
+            this.circularProgressBar2.BarColor1 = System.Drawing.Color.Blue;
+            this.circularProgressBar2.BarColor2 = System.Drawing.Color.Silver;
+            this.circularProgressBar2.BarWidth = 14F;
+            this.circularProgressBar2.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.circularProgressBar2.ForeColor = System.Drawing.Color.DimGray;
+            this.circularProgressBar2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.circularProgressBar2.LineColor = System.Drawing.Color.SteelBlue;
+            this.circularProgressBar2.LineWidth = 1;
+            this.circularProgressBar2.Location = new System.Drawing.Point(69, 41);
+            this.circularProgressBar2.Maximum = ((long)(100));
+            this.circularProgressBar2.MinimumSize = new System.Drawing.Size(100, 100);
+            this.circularProgressBar2.Name = "circularProgressBar2";
+            this.circularProgressBar2.ProgressShape = CircularProgressBar._ProgressShape.Flat;
+            this.circularProgressBar2.Size = new System.Drawing.Size(165, 165);
+            this.circularProgressBar2.TabIndex = 6;
+            this.circularProgressBar2.Text = " 0\n %57";
+            this.circularProgressBar2.TextMode = CircularProgressBar._TextMode.Percentage;
+            this.circularProgressBar2.Value = ((long)(57));
+            this.circularProgressBar2.Click += new System.EventHandler(this.circularProgressBar2_Click);
             // 
             // label5
             // 
@@ -515,29 +546,11 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // circularProgressBar2
+            // timer2
             // 
-            this.circularProgressBar2.BackColor = System.Drawing.Color.Silver;
-            this.circularProgressBar2.BarColor1 = System.Drawing.Color.Blue;
-            this.circularProgressBar2.BarColor2 = System.Drawing.Color.Silver;
-            this.circularProgressBar2.BarWidth = 14F;
-            this.circularProgressBar2.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.circularProgressBar2.ForeColor = System.Drawing.Color.DimGray;
-            this.circularProgressBar2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.circularProgressBar2.LineColor = System.Drawing.Color.SteelBlue;
-            this.circularProgressBar2.LineWidth = 1;
-            this.circularProgressBar2.Location = new System.Drawing.Point(69, 41);
-            this.circularProgressBar2.Maximum = ((long)(100));
-            this.circularProgressBar2.MinimumSize = new System.Drawing.Size(100, 100);
-            this.circularProgressBar2.Name = "circularProgressBar2";
-            this.circularProgressBar2.ProgressShape = CircularProgressBar._ProgressShape.Flat;
-            this.circularProgressBar2.Size = new System.Drawing.Size(165, 165);
-            this.circularProgressBar2.TabIndex = 6;
-            this.circularProgressBar2.Text = " 0\n %57";
-            this.circularProgressBar2.TextMode = CircularProgressBar._TextMode.Percentage;
-            this.circularProgressBar2.Value = ((long)(57));
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // Menü
+            // AnasayfaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -562,7 +575,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Menü";
+            this.Name = "AnasayfaForm";
             this.Text = "Menü";
             this.Load += new System.EventHandler(this.Menü_Load);
             this.MouseEnter += new System.EventHandler(this.Menü_MouseEnter);
@@ -582,7 +595,7 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpKalori;
-        private System.Windows.Forms.Label lblKalori;
+        private System.Windows.Forms.Label lblHedefKalori;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox grpSu;
         private System.Windows.Forms.Label label5;
@@ -614,5 +627,6 @@
         private System.Windows.Forms.Timer timer1;
         private CustomControls.RJControls.RJButton rjButton1;
         private CircularProgressBar circularProgressBar2;
+        private System.Windows.Forms.Timer timer2;
     }
 }
