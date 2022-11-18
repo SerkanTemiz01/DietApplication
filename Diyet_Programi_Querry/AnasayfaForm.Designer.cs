@@ -392,10 +392,10 @@
             // 
             this.lblSu.AutoSize = true;
             this.lblSu.BackColor = System.Drawing.Color.Transparent;
-            this.lblSu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSu.Location = new System.Drawing.Point(338, 83);
+            this.lblSu.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSu.Location = new System.Drawing.Point(329, 98);
             this.lblSu.Name = "lblSu";
-            this.lblSu.Size = new System.Drawing.Size(45, 35);
+            this.lblSu.Size = new System.Drawing.Size(51, 38);
             this.lblSu.TabIndex = 5;
             this.lblSu.Text = "00";
             // 

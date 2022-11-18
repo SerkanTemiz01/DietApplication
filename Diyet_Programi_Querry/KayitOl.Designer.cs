@@ -233,6 +233,7 @@
             this.btnKayitOl.BorderSize = 0;
             this.btnKayitOl.FlatAppearance.BorderSize = 0;
             this.btnKayitOl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKayitOl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKayitOl.ForeColor = System.Drawing.Color.White;
             this.btnKayitOl.Location = new System.Drawing.Point(195, 364);
             this.btnKayitOl.Name = "btnKayitOl";
@@ -284,6 +285,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "KayitOl";
             this.Text = "KayitOl";
+            this.Load += new System.EventHandler(this.KayitOl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
