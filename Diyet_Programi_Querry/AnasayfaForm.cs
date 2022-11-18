@@ -64,7 +64,7 @@ namespace Diyet_Programi_Querry
             lblYas.Text = (DateTime.Now.Year - vucutAnalizi.DogumTarihi.Year).ToString();
             var suListesi = _suTakibiRepository.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).ToList();
             var icilenSuMiktari = suListesi.Sum(x => x.SuMiktari);
-            circularProgressBar2.Value = (long)(icilenSuMiktari / 2500F);
+            circularProgressBar2.Value = (long)((icilenSuMiktari / 2500F)*100);
             circularProgressBar2.alinanKalori =(long) icilenSuMiktari;
         }
 
