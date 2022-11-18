@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAdimSayisi.cs" />
     <Compile Include="Abstract\IAktiviteDuzeyi.cs" />
     <Compile Include="Abstract\IBaseEntity.cs" />
     <Compile Include="Abstract\IBesinler.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Abstract\ISuTakibi.cs" />
     <Compile Include="Abstract\ITuketilenBesinler.cs" />
     <Compile Include="Abstract\IVucutAnalizi.cs" />
+    <Compile Include="Concrete\AdimSayisi.cs" />
     <Compile Include="Concrete\AktiviteDuzeyi.cs" />
     <Compile Include="Concrete\Besinler.cs" />
     <Compile Include="Concrete\KullaniciBilgisi.cs" />

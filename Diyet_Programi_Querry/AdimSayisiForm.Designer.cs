@@ -1,6 +1,6 @@
 ﻿namespace Diyet_Programi_Querry
 {
-    partial class AdimSayisi
+    partial class AdimSayisiForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdimSayisi));
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdimSayisiForm));
+            this.nmrAdimSayisi = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
             this.btnEkle = new CustomControls.RJControls.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAdimSayisi)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // nmrAdimSayisi
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(159, 57);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(163, 26);
-            this.numericUpDown1.TabIndex = 1;
+            this.nmrAdimSayisi.Location = new System.Drawing.Point(159, 57);
+            this.nmrAdimSayisi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.nmrAdimSayisi.Name = "nmrAdimSayisi";
+            this.nmrAdimSayisi.Size = new System.Drawing.Size(163, 22);
+            this.nmrAdimSayisi.TabIndex = 1;
             // 
             // label1
             // 
@@ -52,27 +52,28 @@
             this.label1.Location = new System.Drawing.Point(36, 56);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 23);
+            this.label1.Size = new System.Drawing.Size(93, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Adım Sayısı:";
             // 
-            // button1
+            // btnGeri
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(13, 158);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 54);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGeri.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
+            this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeri.FlatAppearance.BorderSize = 0;
+            this.btnGeri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGeri.Location = new System.Drawing.Point(13, 158);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(66, 54);
+            this.btnGeri.TabIndex = 7;
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
             // 
             // btnEkle
             // 
@@ -91,32 +92,34 @@
             this.btnEkle.Text = "Ekle";
             this.btnEkle.TextColor = System.Drawing.Color.White;
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // AdimSayisi
+            // AdimSayisiForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(395, 224);
             this.Controls.Add(this.btnEkle);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nmrAdimSayisi);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "AdimSayisi";
+            this.Name = "AdimSayisiForm";
             this.Text = "AdimSayisi";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.AdimSayisiForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAdimSayisi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nmrAdimSayisi;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGeri;
         private CustomControls.RJControls.RJButton btnEkle;
     }
 }

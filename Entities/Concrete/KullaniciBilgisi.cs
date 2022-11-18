@@ -38,6 +38,6 @@ namespace Entities.Concrete
         public List<Rapor> Rapors { get ; set ; }
         public List<TuketilenBesinler> TuketilenBesinlers { get ; set; }
         public List<VucutAnalizi> VucutAnalizis { get; set; }
-
+        public List<AdimSayisi> AdimSayisis { get; set; }
     }
 }

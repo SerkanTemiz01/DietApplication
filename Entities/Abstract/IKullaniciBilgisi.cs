@@ -33,5 +33,9 @@ namespace Entities.Abstract
         List<TuketilenBesinler> TuketilenBesinlers { get; set; }
 
         List<VucutAnalizi> VucutAnalizis { get; set; }
+
+        //adim sayisi ekledik
+
+        List<AdimSayisi> AdimSayisis { get; set; }
     }
 }

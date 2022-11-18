@@ -48,6 +48,12 @@ namespace DataAccess.Mapping
             this.HasMany(x => x.VucutAnalizis)
           .WithOptional(x => x.KullaniciBilgisi)
           .HasForeignKey(x => x.KullaniciID);
+
+
+            //adimsayisi
+            this.HasMany(x => x.AdimSayisis)
+        .WithOptional(x => x.KullaniciBilgisi)
+        .HasForeignKey(x => x.KullaniciID);
         }
     }
 }
