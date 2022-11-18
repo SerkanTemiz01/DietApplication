@@ -87,13 +87,14 @@ namespace Diyet_Programi_Querry
         private void dgwTuketilenListesi_CellMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             btnSil.Enabled = true;
-            tuketilenID = (int)dgwTuketilenListesi.CurrentRow.Cells[6].Value;
+            tuketilenID = (int)dgwTuketilenListesi.CurrentRow.Cells[7].Value;
         }
         private void dgwTuketilenListeleme()
         {
             dgwTuketilenListesi.DataSource = _tuketilenBesinlerRepository.GetAll().Where(x => x.KullaniciID == GirisYap.gelenID).Select(x => new
             {
                 BESİNADI = x.BesinBilgileri.BesinAdi,
+                ÖĞÜN=x.Ogun,
                 YAĞ = x.Yag,
                 KARBONHİDRAT = x.Karbonhidrat,
                 PROTEIN = x.Protein,

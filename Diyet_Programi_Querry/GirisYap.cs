@@ -24,11 +24,11 @@ namespace Diyet_Programi_Querry
         private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
             db = new DietQueryDBContext();
-            KullaniciBilgisi kullaniciAdi = db.KullaniciBilgisis.Where(x => x.KullaniciAd == textBox1.Text).FirstOrDefault();
-            KullaniciBilgisi kullaniciSifre = db.KullaniciBilgisis.Where(x => x.Sifre == textBox2.Text).FirstOrDefault();
+            KullaniciBilgisi kullaniciBilgisi = db.KullaniciBilgisis.Where(x => x.KullaniciAd == textBox1.Text && x.Sifre == textBox2.Text).FirstOrDefault();
+            //KullaniciBilgisi kullaniciSifre = db.KullaniciBilgisis.Where(x => x.Sifre == textBox2.Text).FirstOrDefault();
 
 
-            if (kullaniciAdi == null || kullaniciSifre == null)
+            if (kullaniciBilgisi == null)
             {
                 hak--;
                 if (hak == 0)
@@ -42,7 +42,7 @@ namespace Diyet_Programi_Querry
             }
             else
             {
-                gelenID = kullaniciAdi.ID;
+                gelenID = kullaniciBilgisi.ID;
                 MessageBox.Show("Giriş Başarılıdır.");
                 AnasayfaForm anasayfaForm = new AnasayfaForm();
                 anasayfaForm.Show();
