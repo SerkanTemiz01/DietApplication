@@ -25,7 +25,7 @@ namespace Entities.Concrete
 
         public void HarcaKaloriBulma()
         {
-            this.AdimHarcananKalori=0.05m*this.AdimSayisi1 ;
+            this.AdimHarcananKalori=3.67m*this.AdimSayisi1 ;
         }
     }
 }

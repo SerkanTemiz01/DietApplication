@@ -66,6 +66,7 @@
             this.lblAdim = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnGenelRapor = new CustomControls.RJControls.RJButton();
             this.pnlMenu.SuspendLayout();
             this.grpKalori.SuspendLayout();
             this.grpSu.SuspendLayout();
@@ -78,6 +79,7 @@
             this.pnlMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMenu.BackgroundImage")));
             this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlMenu.Controls.Add(this.btnGenelRapor);
             this.pnlMenu.Controls.Add(this.rjButton1);
             this.pnlMenu.Controls.Add(this.btnRaporlama);
             this.pnlMenu.Controls.Add(this.btnEgzersiz);
@@ -105,7 +107,7 @@
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(18, 429);
+            this.rjButton1.Location = new System.Drawing.Point(17, 453);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(168, 51);
             this.rjButton1.TabIndex = 10;
@@ -550,6 +552,25 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // btnGenelRapor
+            // 
+            this.btnGenelRapor.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnGenelRapor.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.btnGenelRapor.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGenelRapor.BorderRadius = 20;
+            this.btnGenelRapor.BorderSize = 0;
+            this.btnGenelRapor.FlatAppearance.BorderSize = 0;
+            this.btnGenelRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenelRapor.ForeColor = System.Drawing.Color.White;
+            this.btnGenelRapor.Location = new System.Drawing.Point(17, 407);
+            this.btnGenelRapor.Name = "btnGenelRapor";
+            this.btnGenelRapor.Size = new System.Drawing.Size(168, 40);
+            this.btnGenelRapor.TabIndex = 11;
+            this.btnGenelRapor.Text = "Genel Rapor";
+            this.btnGenelRapor.TextColor = System.Drawing.Color.White;
+            this.btnGenelRapor.UseVisualStyleBackColor = false;
+            this.btnGenelRapor.Click += new System.EventHandler(this.btnGenelRapor_Click);
+            // 
             // AnasayfaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -628,5 +649,6 @@
         private CustomControls.RJControls.RJButton rjButton1;
         private CircularProgressBar circularProgressBar2;
         private System.Windows.Forms.Timer timer2;
+        private CustomControls.RJControls.RJButton btnGenelRapor;
     }
 }

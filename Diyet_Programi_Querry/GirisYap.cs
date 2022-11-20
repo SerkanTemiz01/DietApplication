@@ -1,4 +1,5 @@
-﻿using DataAccess.Context;
+﻿using DataAccess.ConcreteRepository;
+using DataAccess.Context;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -19,12 +20,15 @@ namespace Diyet_Programi_Querry
             InitializeComponent();
         }
         DietQueryDBContext db;
+        KullaniciBilgisiRepository _kullaniciBilgisiRepository;
         public static int gelenID;
         int hak = 3;
         private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
             db = new DietQueryDBContext();
-            KullaniciBilgisi kullaniciBilgisi = db.KullaniciBilgisis.Where(x => x.KullaniciAd == textBox1.Text && x.Sifre == textBox2.Text).FirstOrDefault();
+            _kullaniciBilgisiRepository = new KullaniciBilgisiRepository(db);
+            
+            KullaniciBilgisi kullaniciBilgisi = _kullaniciBilgisiRepository.GetAll().FirstOrDefault(x=>x.KullaniciAd==txtKullaniciAd.Text&&x.Sifre==txtSifre.Text);
             //KullaniciBilgisi kullaniciSifre = db.KullaniciBilgisis.Where(x => x.Sifre == textBox2.Text).FirstOrDefault();
 
 

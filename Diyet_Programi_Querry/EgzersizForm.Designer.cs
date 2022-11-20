@@ -1,6 +1,6 @@
 ﻿namespace Diyet_Programi_Querry
 {
-    partial class Egzersiz
+    partial class EgzersizForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Egzersiz));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EgzersizForm));
+            this.cmbEgzersiz = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btnGeri = new System.Windows.Forms.Button();
+            this.nmrSure = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEgzersizEkle = new CustomControls.RJControls.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrSure)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbEgzersiz
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(233, 30);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 27);
-            this.comboBox1.TabIndex = 0;
+            this.cmbEgzersiz.FormattingEnabled = true;
+            this.cmbEgzersiz.Location = new System.Drawing.Point(233, 30);
+            this.cmbEgzersiz.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbEgzersiz.Name = "cmbEgzersiz";
+            this.cmbEgzersiz.Size = new System.Drawing.Size(162, 27);
+            this.cmbEgzersiz.TabIndex = 0;
             // 
             // label1
             // 
@@ -59,31 +59,32 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Yaptığınız Egzersizi Seçiniz:";
             // 
-            // button4
+            // btnGeri
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(13, 241);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 57);
-            this.button4.TabIndex = 73;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnGeri.BackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGeri.BackgroundImage")));
+            this.btnGeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGeri.FlatAppearance.BorderSize = 0;
+            this.btnGeri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeri.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGeri.Location = new System.Drawing.Point(13, 241);
+            this.btnGeri.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(85, 57);
+            this.btnGeri.TabIndex = 73;
+            this.btnGeri.UseVisualStyleBackColor = false;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click_1);
             // 
-            // numericUpDown1
+            // nmrSure
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(233, 78);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(162, 26);
-            this.numericUpDown1.TabIndex = 74;
+            this.nmrSure.Location = new System.Drawing.Point(233, 78);
+            this.nmrSure.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.nmrSure.Name = "nmrSure";
+            this.nmrSure.Size = new System.Drawing.Size(162, 26);
+            this.nmrSure.TabIndex = 74;
             // 
             // label2
             // 
@@ -114,8 +115,9 @@
             this.btnEgzersizEkle.Text = "Ekle";
             this.btnEgzersizEkle.TextColor = System.Drawing.Color.White;
             this.btnEgzersizEkle.UseVisualStyleBackColor = false;
+            this.btnEgzersizEkle.Click += new System.EventHandler(this.btnEgzersizEkle_Click_1);
             // 
-            // Egzersiz
+            // EgzersizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,18 +125,18 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(778, 342);
             this.Controls.Add(this.btnEgzersizEkle);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.nmrSure);
+            this.Controls.Add(this.btnGeri);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbEgzersiz);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Egzersiz";
+            this.Name = "EgzersizForm";
             this.Text = "Egzersiz";
             this.Load += new System.EventHandler(this.Egzersiz_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrSure)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,10 +144,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEgzersiz;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btnGeri;
+        private System.Windows.Forms.NumericUpDown nmrSure;
         private System.Windows.Forms.Label label2;
         private CustomControls.RJControls.RJButton btnEgzersizEkle;
     }
