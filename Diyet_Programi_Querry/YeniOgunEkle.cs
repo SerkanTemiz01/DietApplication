@@ -29,6 +29,9 @@ namespace Diyet_Programi_Querry
             cmbOgunAdi.DataSource = Enum.GetValues(typeof(Ogun));
             db = new DietQueryDBContext();
             _besinlerRepository = new BesinlerRepository(db);
+            nmrKarbonhidrat.Maximum = 1000;
+            nmrProtein.Maximum = 1000;
+            nmrYag.Maximum = 1000;
         }
 
         private void btnEkle_Click_1(object sender, EventArgs e)
@@ -40,9 +43,7 @@ namespace Diyet_Programi_Querry
             besinler.Protein = nmrProtein.Value;
             besinler.Yag = nmrYag.Value;
             _besinlerRepository.Add(besinler);
-            nmrKarbonhidrat.Maximum = 1000;
-            nmrProtein.Maximum = 1000;
-            nmrYag.Maximum = 1000;
+            
         }
 
         private void btnGeri_Click(object sender, EventArgs e)

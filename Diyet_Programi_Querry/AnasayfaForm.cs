@@ -182,7 +182,7 @@ namespace Diyet_Programi_Querry
 
         private void btnEgzersiz_Click(object sender, EventArgs e)
         {
-            Egzersiz egzersiz = new Egzersiz();
+            EgzersizForm egzersiz = new EgzersizForm();
             egzersiz.Show();
             this.Close();
         }
@@ -217,6 +217,13 @@ namespace Diyet_Programi_Querry
                 timer2.Stop();
                 
             }
+        }
+
+        private void btnGenelRapor_Click(object sender, EventArgs e)
+        {
+            GenelRapor genelRapor = new GenelRapor();
+            genelRapor.Show();
+            this.Close();
         }
     }
 }

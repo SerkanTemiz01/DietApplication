@@ -10,9 +10,10 @@ namespace Entities.Concrete
 {
     public class Besinler : IBaseEntity, IBesinler
     {
+       
         public int ID { get;set; }
         public string BesinAdi { get;set; }
-        public decimal GramKarsiligi { get;set; }
+        public decimal GramKarsiligi { get; set; } = 100;
         public decimal Kalori { get;set; }
         public decimal Karbonhidrat { get;set; }
         public decimal Protein { get;set; }

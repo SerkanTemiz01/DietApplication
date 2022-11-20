@@ -11,7 +11,7 @@ namespace Entities.Abstract
     public interface IEgzersizler
     {
         int ID { get; set; }
-        Egzersiz Egzersiz { get; set; }
+        EgzersizEnum Egzersiz { get; set; }
 
         int Sure { get; set; }
         decimal HarcananKalori { get; set; }

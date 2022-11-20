@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -112,6 +113,17 @@ namespace Diyet_Programi_Querry
             this.Close();
         }
 
-       
+        private void txtBesinArama_TextChanged(object sender, EventArgs e)
+        {
+            string Besin=txtBesinArama.Text;
+            if(txtBesinArama.Text.Length>0)
+            {
+                 Besin = txtBesinArama.Text.Substring(0, 1).ToUpper() +
+                txtBesinArama.Text.Substring(1, txtBesinArama.Text.Length - 1).ToLower();
+                
+            }
+
+            dgwliste.DataSource = _besinlerRepository.GetAll().Where(x => x.BesinAdi.StartsWith(Besin)).ToList();
+        }
     }
 }

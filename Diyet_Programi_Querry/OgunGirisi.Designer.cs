@@ -39,6 +39,8 @@
             this.btnEkle = new CustomControls.RJControls.RJButton();
             this.btnYeniÖgun = new CustomControls.RJControls.RJButton();
             this.btnSil = new CustomControls.RJControls.RJButton();
+            this.txtBesinArama = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwliste)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwTuketilenListesi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrGram)).BeginInit();
@@ -47,7 +49,7 @@
             // cmbOgunSec
             // 
             this.cmbOgunSec.FormattingEnabled = true;
-            this.cmbOgunSec.Location = new System.Drawing.Point(13, 65);
+            this.cmbOgunSec.Location = new System.Drawing.Point(13, 273);
             this.cmbOgunSec.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbOgunSec.Name = "cmbOgunSec";
             this.cmbOgunSec.Size = new System.Drawing.Size(249, 27);
@@ -57,7 +59,7 @@
             // 
             this.dgwliste.BackgroundColor = System.Drawing.Color.MintCream;
             this.dgwliste.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwliste.Location = new System.Drawing.Point(13, 96);
+            this.dgwliste.Location = new System.Drawing.Point(13, 62);
             this.dgwliste.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgwliste.Name = "dgwliste";
             this.dgwliste.RowHeadersWidth = 51;
@@ -69,7 +71,7 @@
             // 
             this.dgwTuketilenListesi.BackgroundColor = System.Drawing.Color.MintCream;
             this.dgwTuketilenListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwTuketilenListesi.Location = new System.Drawing.Point(447, 96);
+            this.dgwTuketilenListesi.Location = new System.Drawing.Point(447, 62);
             this.dgwTuketilenListesi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgwTuketilenListesi.Name = "dgwTuketilenListesi";
             this.dgwTuketilenListesi.RowHeadersWidth = 51;
@@ -183,6 +185,24 @@
             this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
             // 
+            // txtBesinArama
+            // 
+            this.txtBesinArama.Location = new System.Drawing.Point(120, 30);
+            this.txtBesinArama.Name = "txtBesinArama";
+            this.txtBesinArama.Size = new System.Drawing.Size(209, 26);
+            this.txtBesinArama.TabIndex = 8;
+            this.txtBesinArama.TextChanged += new System.EventHandler(this.txtBesinArama_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(12, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 19);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Besin Arama";
+            // 
             // OgunGirisi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -190,6 +210,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(881, 427);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtBesinArama);
             this.Controls.Add(this.btnYeniÖgun);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
@@ -224,5 +246,7 @@
         private CustomControls.RJControls.RJButton btnEkle;
         private CustomControls.RJControls.RJButton btnYeniÖgun;
         private CustomControls.RJControls.RJButton btnSil;
+        private System.Windows.Forms.TextBox txtBesinArama;
+        private System.Windows.Forms.Label label3;
     }
 }

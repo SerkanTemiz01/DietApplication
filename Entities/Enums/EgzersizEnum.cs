@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Enums
 {
-    public enum Egzersiz
+    public enum EgzersizEnum
     {
         GucAntremani = 1,
         Yuruyus,
